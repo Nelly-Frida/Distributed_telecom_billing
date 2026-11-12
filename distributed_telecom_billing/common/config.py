@@ -1,0 +1,19 @@
+NODE_HOST = "127.0.0.1"
+
+NODE1_PORT = 5001
+NODE2_PORT = 5002
+
+RATING_NODES = {
+    "NODE-3": (NODE_HOST, 5003),
+    "NODE-4": (NODE_HOST, 5004),
+    "NODE-5": (NODE_HOST, 5005),
+    "NODE-6": (NODE_HOST, 5006),
+}
+
+# Baseline: ["NODE-3"]
+# Proposed 2-node: ["NODE-3", "NODE-4"]
+# Proposed 4-node: ["NODE-3", "NODE-4", "NODE-5", "NODE-6"]
+ACTIVE_RATING_NODES = ["NODE-3", "NODE-4"]
+
+REQUEST_TIMEOUT = 5.0
+WORKLOAD_SIZE = 1000
