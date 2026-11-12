@@ -1,0 +1,4 @@
+timestamp,event,node,details
+1790502808.737,failure_detected,0,missed for 5.5s
+1790507395.477,failure_detected,0,missed for 5.0s
+1790516136.345,failure_detected,0,missed for 5.4s

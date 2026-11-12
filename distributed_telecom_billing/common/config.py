@@ -9,11 +9,20 @@ RATING_NODES = {
     "NODE-5": (NODE_HOST, 5005),
     "NODE-6": (NODE_HOST, 5006),
 }
-
-# Baseline: ["NODE-3"]
-# Proposed 2-node: ["NODE-3", "NODE-4"]
-# Proposed 4-node: ["NODE-3", "NODE-4", "NODE-5", "NODE-6"]
-ACTIVE_RATING_NODES = ["NODE-3", "NODE-4"]
+ACTIVE_RATING_NODES = ["NODE-3", "NODE-4", "NODE-5", "NODE-6"]
 
 REQUEST_TIMEOUT = 5.0
-WORKLOAD_SIZE = 1000
+WORKLOAD_SIZE   = 1000
+
+USE_HTTP_GATEWAY   = True
+APACHE_HOST        = "127.0.0.1"
+APACHE_PORT        = 80
+BILLING_API_HOST   = "127.0.0.1"
+BILLING_API_PORT   = 8000
+
+DASHBOARD_DIR      = "powerbi/dashboard_data"
+RESULTS_DIR        = "results"
+
+LEADER_ELECTION_ENABLED = True
+HEARTBEAT_INTERVAL      = 2.0
+HEARTBEAT_TIMEOUT       = 5.0

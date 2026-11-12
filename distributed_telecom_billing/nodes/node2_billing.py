@@ -1,9 +1,4 @@
-import socket
-import json
-import os
-import sys
-import time
-
+import socket, json, os, sys, time
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
@@ -27,7 +22,6 @@ print(f"Active rating nodes: {dispatcher.node_names}")
 while True:
     connection, address = server.accept()
     connection.settimeout(10)
-
     try:
         buffer = b""
         while b"\n" not in buffer:
@@ -35,22 +29,17 @@ while True:
             if not chunk:
                 break
             buffer += chunk
-
         if not buffer:
             connection.close()
             continue
-
         request = json.loads(buffer.split(b"\n", 1)[0].decode())
         start = time.perf_counter()
         response = dispatcher.process_request(request)
         total_time = time.perf_counter() - start
-
         response["billing_node"] = "NODE-2"
         response["billing_processing_time"] = total_time
         response["billing_pid"] = os.getpid()
-
         connection.sendall((json.dumps(response) + "\n").encode())
-
     except Exception as error:
         response = {"error": str(error), "node": "NODE-2"}
         connection.sendall((json.dumps(response) + "\n").encode())

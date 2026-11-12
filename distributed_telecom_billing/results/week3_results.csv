@@ -1,0 +1,5 @@
+transport,total_requests,successful,failed,throughput,avg_latency_ms,avg_jitter_ms,request_loss_pct,load_balance_cv
+http,1000,1000,0,64.561,15.474,8.5912,0.0,0.0
+http,1000,1000,0,60.735,16.4498,10.1271,0.0,0.0
+http,1000,1000,0,60.853,16.4188,9.8577,0.0,0.0
+http,1000,1000,0,81.448,12.2614,9.1454,0.0,0.0
