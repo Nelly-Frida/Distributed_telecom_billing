@@ -16,10 +16,13 @@ def find_pid(substr):
 
 
 def ping_all():
+    # PROBE, not PING: keeps this diagnostic script from being counted as
+    # a bully-election follower by whichever node currently holds the
+    # Coordinator role (see nodes/node*_rating.py handle()).
     for node in ("NODE-3", "NODE-4", "NODE-5", "NODE-6"):
         try:
             host, port = RATING_NODES[node]
-            r = send_json(host, port, {"type": "PING", "from_id": 0}, timeout=1.0)
+            r = send_json(host, port, {"type": "PROBE", "from_id": 0}, timeout=1.0)
             print(f"  {node}: {r}")
         except Exception as e:
             print(f"  {node}: unreachable ({e})")

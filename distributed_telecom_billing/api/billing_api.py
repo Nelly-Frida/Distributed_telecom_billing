@@ -7,7 +7,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from common.communication import send_json
-from common.config import NODE_HOST, NODE2_PORT, REQUEST_TIMEOUT, BILLING_API_PORT
+from common.config import NODE_HOST, NODE2_PORT, REQUEST_TIMEOUT, BILLING_API_PORT, BIND_HOST
 from monitoring.metrics_logger import MetricsLogger
 
 logger = MetricsLogger()
@@ -31,10 +31,12 @@ class Handler(BaseHTTPRequestHandler):
         return json.loads(raw.decode("utf-8"))
 
     def do_POST(self):
-        if self.path.rstrip("/") == "/bill":
+        if self.path.rstrip("/") in ("/bill", "/bill/transaction"):
             try:
                 req = self._read_json()
                 t0 = time.perf_counter()
+                if self.path.rstrip("/") == "/bill/transaction":
+                    req["type"] = "TX_BILL"
                 response = send_json(NODE_HOST, NODE2_PORT, req,
                                      timeout=REQUEST_TIMEOUT)
                 latency_ms = (time.perf_counter() - t0) * 1000
@@ -53,6 +55,9 @@ class Handler(BaseHTTPRequestHandler):
             self._send(200, logger.snapshot())
         elif self.path == "/export":
             self._send(200, {"ok": True, "files": logger.export_all()})
+        elif self.path == "/flush":
+            logger.flush()
+            self._send(200, {"ok": True, "flushed": True})
         else:
             self._send(404, {"error": "not found"})
 
@@ -60,9 +65,16 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
 
+class BillingHTTPServer(ThreadingHTTPServer):
+    # Default backlog (5) is too small once the workload generator opens
+    # many concurrent connections (see node1_customer.run_workload_concurrent).
+    request_queue_size = 256
+    daemon_threads = True
+
+
 def main():
-    server = ThreadingHTTPServer((NODE_HOST, BILLING_API_PORT), Handler)
-    print(f"[billing-api] http://{NODE_HOST}:{BILLING_API_PORT}")
+    server = BillingHTTPServer((BIND_HOST, BILLING_API_PORT), Handler)
+    print(f"[billing-api] http://{BIND_HOST}:{BILLING_API_PORT}; billing node={NODE_HOST}:{NODE2_PORT}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

@@ -12,6 +12,7 @@ PROCESS_MAP = {
     "NODE-5": "nodes/node5_rating.py",
     "NODE-6": "nodes/node6_rating.py",
     "BILLING-API": "api/billing_api.py",
+    "LEDGER": "transactions/ledger_node.py",
 }
 
 
@@ -27,17 +28,19 @@ def start(node_name):
 def main():
     procs = []
     print("=" * 60)
-    print("DISTRIBUTED TELECOM BILLING - WEEKS 3 & 4 LAUNCHER")
+    print("DISTRIBUTED TELECOM BILLING - ASSIGNMENT 3 / WEEKS 5 TO 6")
     print("=" * 60)
 
-    print("\n[1/3] Billing node")
+    print("\n[1/4] Billing node + transaction coordinator")
     procs.append(start("NODE-2")); time.sleep(0.8)
+    print("\n[2/4] Distributed ledger participant")
+    procs.append(start("LEDGER")); time.sleep(0.5)
 
-    print("\n[2/3] Rating nodes (leader election enabled)")
+    print("\n[3/4] Rating nodes (leader election enabled)")
     for n in ACTIVE_RATING_NODES:
         procs.append(start(n)); time.sleep(0.4)
 
-    print("\n[3/3] Python billing API (HTTP :8000)")
+    print("\n[4/4] Python billing API (HTTP :8000)")
     procs.append(start("BILLING-API"))
 
     print("\nSystem up.")
@@ -46,6 +49,11 @@ def main():
     print("  python experiments/week3_architecture.py")
     print("  python experiments/week4_election.py")
     print("  python experiments/week4_failure.py")
+    print("  python experiments/week5_transactions.py")
+    print("  python experiments/week5_transaction_load.py --transactions 100 --workers 10")
+    print("  python experiments/week5_durability_check.py (after restarting services)")
+    print("  python experiments/week6_concurrency.py")
+    print("For container deployment, use: docker compose up --build -d")
     print("\nPress CTRL+C to terminate.")
 
     try:

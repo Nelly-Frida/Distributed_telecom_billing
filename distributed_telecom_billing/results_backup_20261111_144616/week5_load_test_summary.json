@@ -1,0 +1,617 @@
+{
+  "metrics": {
+    "submitted": 100,
+    "workers": 10,
+    "elapsed_s": 5.5602,
+    "committed": 100,
+    "aborted": 0,
+    "errors_or_in_doubt": 0,
+    "completed_throughput_tx_s": 17.985,
+    "successful_commit_throughput_tx_s": 17.985,
+    "mean_latency_ms": 532.624,
+    "p95_latency_ms": 708.303,
+    "max_latency_ms": 901.715
+  },
+  "results": [
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000009",
+      "status": "COMMIT",
+      "latency_ms": 356.325,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000003",
+      "status": "COMMIT",
+      "latency_ms": 371.179,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000002",
+      "status": "COMMIT",
+      "latency_ms": 385.029,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000004",
+      "status": "COMMIT",
+      "latency_ms": 399.347,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000001",
+      "status": "COMMIT",
+      "latency_ms": 418.009,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000005",
+      "status": "COMMIT",
+      "latency_ms": 429.087,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000008",
+      "status": "COMMIT",
+      "latency_ms": 450.444,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000010",
+      "status": "COMMIT",
+      "latency_ms": 497.016,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000006",
+      "status": "COMMIT",
+      "latency_ms": 608.522,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000011",
+      "status": "COMMIT",
+      "latency_ms": 390.064,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000012",
+      "status": "COMMIT",
+      "latency_ms": 390.456,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000007",
+      "status": "COMMIT",
+      "latency_ms": 768.551,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000014",
+      "status": "COMMIT",
+      "latency_ms": 422.209,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000013",
+      "status": "COMMIT",
+      "latency_ms": 471.609,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000015",
+      "status": "COMMIT",
+      "latency_ms": 480.091,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000016",
+      "status": "COMMIT",
+      "latency_ms": 607.081,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000019",
+      "status": "COMMIT",
+      "latency_ms": 440.248,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000017",
+      "status": "COMMIT",
+      "latency_ms": 684.42,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000018",
+      "status": "COMMIT",
+      "latency_ms": 661.917,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000020",
+      "status": "COMMIT",
+      "latency_ms": 444.069,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000023",
+      "status": "COMMIT",
+      "latency_ms": 579.583,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000024",
+      "status": "COMMIT",
+      "latency_ms": 560.39,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000021",
+      "status": "COMMIT",
+      "latency_ms": 684.728,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000025",
+      "status": "COMMIT",
+      "latency_ms": 636.651,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000028",
+      "status": "COMMIT",
+      "latency_ms": 438.169,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000026",
+      "status": "COMMIT",
+      "latency_ms": 558.652,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000029",
+      "status": "COMMIT",
+      "latency_ms": 478.913,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000027",
+      "status": "COMMIT",
+      "latency_ms": 607.542,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000022",
+      "status": "COMMIT",
+      "latency_ms": 901.715,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000030",
+      "status": "COMMIT",
+      "latency_ms": 551.846,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000033",
+      "status": "COMMIT",
+      "latency_ms": 399.743,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000031",
+      "status": "COMMIT",
+      "latency_ms": 585.551,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000034",
+      "status": "COMMIT",
+      "latency_ms": 469.738,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000032",
+      "status": "COMMIT",
+      "latency_ms": 602.361,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000038",
+      "status": "COMMIT",
+      "latency_ms": 406.571,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000036",
+      "status": "COMMIT",
+      "latency_ms": 479.539,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000035",
+      "status": "COMMIT",
+      "latency_ms": 518.937,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000037",
+      "status": "COMMIT",
+      "latency_ms": 478.412,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000040",
+      "status": "COMMIT",
+      "latency_ms": 413.035,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000039",
+      "status": "COMMIT",
+      "latency_ms": 573.398,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000041",
+      "status": "COMMIT",
+      "latency_ms": 488.715,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000044",
+      "status": "COMMIT",
+      "latency_ms": 500.335,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000047",
+      "status": "COMMIT",
+      "latency_ms": 472.169,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000048",
+      "status": "COMMIT",
+      "latency_ms": 479.18,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000046",
+      "status": "COMMIT",
+      "latency_ms": 559.702,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000042",
+      "status": "COMMIT",
+      "latency_ms": 654.498,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000045",
+      "status": "COMMIT",
+      "latency_ms": 599.276,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000043",
+      "status": "COMMIT",
+      "latency_ms": 671.919,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000049",
+      "status": "COMMIT",
+      "latency_ms": 611.177,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000050",
+      "status": "COMMIT",
+      "latency_ms": 560.813,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000051",
+      "status": "COMMIT",
+      "latency_ms": 558.175,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000054",
+      "status": "COMMIT",
+      "latency_ms": 399.518,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000052",
+      "status": "COMMIT",
+      "latency_ms": 540.136,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000060",
+      "status": "COMMIT",
+      "latency_ms": 297.585,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000055",
+      "status": "COMMIT",
+      "latency_ms": 504.428,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000058",
+      "status": "COMMIT",
+      "latency_ms": 476.04,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000053",
+      "status": "COMMIT",
+      "latency_ms": 604.857,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000059",
+      "status": "COMMIT",
+      "latency_ms": 504.126,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000057",
+      "status": "COMMIT",
+      "latency_ms": 685.387,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000056",
+      "status": "COMMIT",
+      "latency_ms": 857.316,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000062",
+      "status": "COMMIT",
+      "latency_ms": 567.909,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000061",
+      "status": "COMMIT",
+      "latency_ms": 708.303,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000067",
+      "status": "COMMIT",
+      "latency_ms": 436.09,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000063",
+      "status": "COMMIT",
+      "latency_ms": 585.623,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000066",
+      "status": "COMMIT",
+      "latency_ms": 499.45,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000064",
+      "status": "COMMIT",
+      "latency_ms": 577.838,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000065",
+      "status": "COMMIT",
+      "latency_ms": 567.731,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000069",
+      "status": "COMMIT",
+      "latency_ms": 463.833,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000068",
+      "status": "COMMIT",
+      "latency_ms": 563.119,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000071",
+      "status": "COMMIT",
+      "latency_ms": 353.947,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000070",
+      "status": "COMMIT",
+      "latency_ms": 611.441,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000075",
+      "status": "COMMIT",
+      "latency_ms": 512.349,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000078",
+      "status": "COMMIT",
+      "latency_ms": 367.08,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000074",
+      "status": "COMMIT",
+      "latency_ms": 568.092,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000072",
+      "status": "COMMIT",
+      "latency_ms": 630.964,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000079",
+      "status": "COMMIT",
+      "latency_ms": 425.05,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000077",
+      "status": "COMMIT",
+      "latency_ms": 601.276,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000073",
+      "status": "COMMIT",
+      "latency_ms": 708.554,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000076",
+      "status": "COMMIT",
+      "latency_ms": 648.716,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000080",
+      "status": "COMMIT",
+      "latency_ms": 558.796,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000081",
+      "status": "COMMIT",
+      "latency_ms": 478.921,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000084",
+      "status": "COMMIT",
+      "latency_ms": 537.349,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000086",
+      "status": "COMMIT",
+      "latency_ms": 494.977,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000087",
+      "status": "COMMIT",
+      "latency_ms": 490.97,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000085",
+      "status": "COMMIT",
+      "latency_ms": 574.261,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000088",
+      "status": "COMMIT",
+      "latency_ms": 519.32,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000083",
+      "status": "COMMIT",
+      "latency_ms": 705.748,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000082",
+      "status": "COMMIT",
+      "latency_ms": 725.653,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000089",
+      "status": "COMMIT",
+      "latency_ms": 619.061,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000091",
+      "status": "COMMIT",
+      "latency_ms": 392.336,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000090",
+      "status": "COMMIT",
+      "latency_ms": 507.755,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000094",
+      "status": "COMMIT",
+      "latency_ms": 449.337,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000100",
+      "status": "COMMIT",
+      "latency_ms": 323.516,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000097",
+      "status": "COMMIT",
+      "latency_ms": 422.921,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000095",
+      "status": "COMMIT",
+      "latency_ms": 519.003,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000093",
+      "status": "COMMIT",
+      "latency_ms": 594.58,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000096",
+      "status": "COMMIT",
+      "latency_ms": 536.29,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000098",
+      "status": "COMMIT",
+      "latency_ms": 516.887,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000092",
+      "status": "COMMIT",
+      "latency_ms": 667.787,
+      "error": ""
+    },
+    {
+      "transaction_id": "A3-LOAD-1794393258731792000-000099",
+      "status": "COMMIT",
+      "latency_ms": 603.06,
+      "error": ""
+    }
+  ]
+}

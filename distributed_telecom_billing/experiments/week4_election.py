@@ -8,9 +8,13 @@ from common.config import RATING_NODES
 
 
 def ping(node_name):
+    # PROBE is a read-only external health check. It is intentionally a
+    # different message type from the internal "PING" the bully-election
+    # heartbeat protocol uses between real peers (ids 3-6), so running
+    # this script never registers a phantom follower in coordination.csv.
     host, port = RATING_NODES[node_name]
     try:
-        return send_json(host, port, {"type": "PING", "from_id": 0}, timeout=1.0)
+        return send_json(host, port, {"type": "PROBE", "from_id": 0}, timeout=1.0)
     except Exception as e:
         return {"error": str(e)}
 

@@ -1,0 +1,142 @@
+x-common-env: &common-env
+  BIND_HOST: "0.0.0.0"
+  NODE_HOST: node2
+  NODE2_PORT: "5002"
+  NODE3_HOST: node3
+  NODE4_HOST: node4
+  NODE5_HOST: node5
+  NODE6_HOST: node6
+  LEDGER_HOST: ledger
+  LEDGER_PORT: "5007"
+  BILLING_API_PORT: "8000"
+  REQUEST_TIMEOUT: "8"
+  DASHBOARD_DIR: /app/powerbi/dashboard_data
+
+services:
+  ledger:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "transactions/ledger_node.py"]
+    environment:
+      BIND_HOST: "0.0.0.0"
+      LEDGER_PORT: "5007"
+      LEDGER_DB_PATH: /data/ledger.db
+    volumes:
+      - ledger_data:/data
+    ports: ["5007:5007"]
+    restart: unless-stopped
+
+  node3:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "nodes/node3_rating.py"]
+    environment:
+      <<: *common-env
+      ADVERTISE_HOST: node3
+      RATING_DB_PATH: /data/rating.db
+    volumes:
+      - node3_data:/data
+      - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
+    ports: ["5003:5003"]
+    restart: unless-stopped
+
+  node4:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "nodes/node4_rating.py"]
+    environment:
+      <<: *common-env
+      ADVERTISE_HOST: node4
+      RATING_DB_PATH: /data/rating.db
+    volumes:
+      - node4_data:/data
+      - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
+    ports: ["5004:5004"]
+    restart: unless-stopped
+
+  node5:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "nodes/node5_rating.py"]
+    environment:
+      <<: *common-env
+      ADVERTISE_HOST: node5
+      RATING_DB_PATH: /data/rating.db
+    volumes:
+      - node5_data:/data
+      - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
+    ports: ["5005:5005"]
+    restart: unless-stopped
+
+  node6:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "nodes/node6_rating.py"]
+    environment:
+      <<: *common-env
+      ADVERTISE_HOST: node6
+      RATING_DB_PATH: /data/rating.db
+    volumes:
+      - node6_data:/data
+      - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
+    ports: ["5006:5006"]
+    restart: unless-stopped
+
+  node2:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "nodes/node2_billing.py"]
+    environment:
+      <<: *common-env
+      TX_JOURNAL_PATH: /data/coordinator.db
+      TX_CSV_PATH: /app/results/week5_transactions.csv
+    volumes:
+      - coordinator_data:/data
+      - ./results:/app/results
+      - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
+    ports:
+      - "5002:5002"
+    depends_on:
+      - ledger
+      - node3
+      - node4
+      - node5
+      - node6
+    restart: unless-stopped
+
+  billing-api:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "api/billing_api.py"]
+    environment:
+      <<: *common-env
+      BILLING_API_PORT: "8000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - node2
+    restart: unless-stopped
+
+  spark-analytics:
+    image: apache/spark:3.5.1
+    profiles: ["analytics"]
+    working_dir: /opt/spark/work-dir
+    command:
+      - /opt/spark/bin/spark-submit
+      - /opt/app/transaction_analytics.py
+      - /opt/results/week5_transactions.csv
+      - /opt/results/week6_concurrency.csv
+      - /opt/results/spark_analytics
+    volumes:
+      - ./analytics:/opt/app:ro
+      - ./results:/opt/results
+    environment:
+      SPARK_LOCAL_IP: 127.0.0.1
+
+volumes:
+  ledger_data:
+  coordinator_data:
+  node3_data:
+  node4_data:
+  node5_data:
+  node6_data:

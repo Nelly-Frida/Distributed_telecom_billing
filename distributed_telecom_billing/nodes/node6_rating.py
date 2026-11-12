@@ -8,12 +8,15 @@ from rating.rating_engine import RatingEngine
 from coordination.lamport_clock import LamportClock
 from coordination.bully_election import BullyElection
 from coordination.coordinator import Coordinator
+from transactions.rating_participant import RatingTransactionParticipant
+from common.config import BIND_HOST, ADVERTISE_HOST, RATING_NODES
 
-HOST, PORT = "127.0.0.1", 5006
+HOST, PORT = BIND_HOST, 5006
 NODE_ID    = "NODE-6"
 MY_ID      = 6
 
 engine  = RatingEngine()
+tx_participant = RatingTransactionParticipant(engine, os.getenv("RATING_DB_PATH", "data/node6_rating_transactions.db"))
 clock   = LamportClock(NODE_ID)
 elector = None
 coord   = None
@@ -47,16 +50,34 @@ def handle(connection):
         request = json.loads(buffer.split(b"\n", 1)[0].decode())
         clock.update(request.get("lamport", 0))
 
-        if request.get("type") == "ELECTION" and elector:
+        if request.get("type") == "TX_PREPARE":
+            response = tx_participant.prepare(request)
+        elif request.get("type") == "TX_COMMIT":
+            response = tx_participant.commit(request["transaction_id"])
+        elif request.get("type") == "TX_ABORT":
+            response = tx_participant.abort(request["transaction_id"])
+        elif request.get("type") == "TX_STATUS":
+            response = tx_participant.status(request["transaction_id"])
+        elif request.get("type") == "ELECTION" and elector:
             elector.receive_election(request["from_id"], request["from_addr"])
             response = {"ok": True, "node": NODE_ID}
         elif request.get("type") == "COORDINATOR" and elector:
             elector.receive_coordinator(request["leader_id"], request["leader_addr"])
             response = {"ok": True, "node": NODE_ID}
         elif request.get("type") == "PING":
+            # Internal bully-election heartbeat channel only.
+            # Real follower ids are always >= 3, so this is safe from
+            # collision with the external diagnostic PROBE below.
             if coord:
                 coord.note_heartbeat(request.get("from_id", "?"))
             response = {"ok": True, "node": NODE_ID, "my_id": MY_ID}
+        elif request.get("type") == "PROBE":
+            # External health-check (used by experiment scripts).
+            # Deliberately does NOT touch the coordinator heartbeat
+            # table, so manual probing never shows up in
+            # coordination.csv as a phantom follower failure.
+            response = {"ok": True, "node": NODE_ID, "my_id": MY_ID,
+                        "leader_id": elector.leader_id if elector else None}
         else:
             response = process_request(request)
 
@@ -76,26 +97,30 @@ def handle(connection):
 
 def main():
     global elector, coord
-    higher_peers = []
+    peer_ids = [3, 4, 5, 6]
+    all_peers = [(i, RATING_NODES[f"NODE-{i}"]) for i in peer_ids if i != MY_ID]
+    higher_peers = [(i, addr) for i, addr in all_peers if i > MY_ID]
 
     def _on_leader_change(leader_id, leader_addr):
         global coord
-        if leader_id == MY_ID:
+        if leader_id == MY_ID and coord is None:
             coord = Coordinator(NODE_ID)
             coord.start()
 
     elector = BullyElection(
         node_id=NODE_ID, my_id=MY_ID,
-        higher_peers=higher_peers, my_addr=(HOST, PORT),
+        higher_peers=higher_peers,
+        my_addr=(ADVERTISE_HOST, PORT),
         on_leader_change=_on_leader_change,
+        all_peers=all_peers,
     )
     elector.start()
 
     srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     srv.bind((HOST, PORT))
-    srv.listen(50)
-    print(f"{NODE_ID} running on {HOST}:{PORT} PID={os.getpid()}")
+    srv.listen(200)
+    print(f"{NODE_ID} running on {HOST}:{PORT} advertised={ADVERTISE_HOST}:{PORT} PID={os.getpid()}")
 
     while True:
         connection, _ = srv.accept()

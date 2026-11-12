@@ -1,0 +1,576 @@
+{
+  "race_condition": {
+    "expected": 2400,
+    "without_mutex": 464,
+    "with_mutex": 2400,
+    "lost_updates_without_mutex": 1936,
+    "mutex_correct": true
+  },
+  "detection": {
+    "experiment": "deadlock_detection_recovery",
+    "detected": true,
+    "wait_for_graph": {
+      "TX-A": [
+        "TX-B"
+      ],
+      "TX-B": [
+        "TX-A"
+      ]
+    },
+    "resource_allocation_graph": {
+      "allocated": {
+        "ACCOUNT-A": "TX-A",
+        "ACCOUNT-B": "TX-B"
+      },
+      "requested": {
+        "TX-A": [
+          "ACCOUNT-B"
+        ],
+        "TX-B": [
+          "ACCOUNT-A"
+        ]
+      }
+    },
+    "victim": "TX-B",
+    "outcomes": [
+      {
+        "transaction": "TX-B",
+        "result": "ABORTED_DEADLOCK",
+        "duration_ms": 11.461
+      },
+      {
+        "transaction": "TX-A",
+        "result": "COMPLETED_AFTER_RECOVERY",
+        "duration_ms": 12.18
+      }
+    ],
+    "final_state": {
+      "locked_resources": 0,
+      "waiting_transactions": 0,
+      "owners": {},
+      "wait_for_graph": {}
+    }
+  },
+  "prevention": {
+    "experiment": "ordered_lock_prevention",
+    "transactions": 100,
+    "workers": 8,
+    "completed": 100,
+    "aborted": 0,
+    "elapsed_s": 0.1796,
+    "throughput_tx_s": 556.864,
+    "mean_wait_ms": 12.925,
+    "max_wait_ms": 173.845,
+    "timeouts_observed": false,
+    "no_starvation_observed_in_bounded_run": true,
+    "balances": {
+      "ACCOUNT-A": 9900,
+      "ACCOUNT-B": 10100
+    },
+    "balance_total": 20000,
+    "mutual_exclusion_preserved": true,
+    "deadlock_prevented": true,
+    "results": [
+      {
+        "transaction": "ORD-0000",
+        "result": "COMPLETED",
+        "wait_ms": 1.966
+      },
+      {
+        "transaction": "ORD-0004",
+        "result": "COMPLETED",
+        "wait_ms": 1.537
+      },
+      {
+        "transaction": "ORD-0008",
+        "result": "COMPLETED",
+        "wait_ms": 1.645
+      },
+      {
+        "transaction": "ORD-0010",
+        "result": "COMPLETED",
+        "wait_ms": 1.205
+      },
+      {
+        "transaction": "ORD-0011",
+        "result": "COMPLETED",
+        "wait_ms": 1.539
+      },
+      {
+        "transaction": "ORD-0012",
+        "result": "COMPLETED",
+        "wait_ms": 1.559
+      },
+      {
+        "transaction": "ORD-0013",
+        "result": "COMPLETED",
+        "wait_ms": 1.43
+      },
+      {
+        "transaction": "ORD-0014",
+        "result": "COMPLETED",
+        "wait_ms": 1.532
+      },
+      {
+        "transaction": "ORD-0015",
+        "result": "COMPLETED",
+        "wait_ms": 1.687
+      },
+      {
+        "transaction": "ORD-0016",
+        "result": "COMPLETED",
+        "wait_ms": 1.658
+      },
+      {
+        "transaction": "ORD-0017",
+        "result": "COMPLETED",
+        "wait_ms": 1.547
+      },
+      {
+        "transaction": "ORD-0018",
+        "result": "COMPLETED",
+        "wait_ms": 1.55
+      },
+      {
+        "transaction": "ORD-0019",
+        "result": "COMPLETED",
+        "wait_ms": 1.663
+      },
+      {
+        "transaction": "ORD-0020",
+        "result": "COMPLETED",
+        "wait_ms": 1.564
+      },
+      {
+        "transaction": "ORD-0021",
+        "result": "COMPLETED",
+        "wait_ms": 1.747
+      },
+      {
+        "transaction": "ORD-0022",
+        "result": "COMPLETED",
+        "wait_ms": 1.49
+      },
+      {
+        "transaction": "ORD-0023",
+        "result": "COMPLETED",
+        "wait_ms": 1.465
+      },
+      {
+        "transaction": "ORD-0024",
+        "result": "COMPLETED",
+        "wait_ms": 1.514
+      },
+      {
+        "transaction": "ORD-0025",
+        "result": "COMPLETED",
+        "wait_ms": 1.827
+      },
+      {
+        "transaction": "ORD-0026",
+        "result": "COMPLETED",
+        "wait_ms": 1.588
+      },
+      {
+        "transaction": "ORD-0027",
+        "result": "COMPLETED",
+        "wait_ms": 1.429
+      },
+      {
+        "transaction": "ORD-0028",
+        "result": "COMPLETED",
+        "wait_ms": 1.834
+      },
+      {
+        "transaction": "ORD-0029",
+        "result": "COMPLETED",
+        "wait_ms": 1.157
+      },
+      {
+        "transaction": "ORD-0030",
+        "result": "COMPLETED",
+        "wait_ms": 1.507
+      },
+      {
+        "transaction": "ORD-0031",
+        "result": "COMPLETED",
+        "wait_ms": 1.579
+      },
+      {
+        "transaction": "ORD-0032",
+        "result": "COMPLETED",
+        "wait_ms": 1.669
+      },
+      {
+        "transaction": "ORD-0033",
+        "result": "COMPLETED",
+        "wait_ms": 1.582
+      },
+      {
+        "transaction": "ORD-0034",
+        "result": "COMPLETED",
+        "wait_ms": 1.331
+      },
+      {
+        "transaction": "ORD-0035",
+        "result": "COMPLETED",
+        "wait_ms": 1.727
+      },
+      {
+        "transaction": "ORD-0036",
+        "result": "COMPLETED",
+        "wait_ms": 1.339
+      },
+      {
+        "transaction": "ORD-0037",
+        "result": "COMPLETED",
+        "wait_ms": 1.678
+      },
+      {
+        "transaction": "ORD-0038",
+        "result": "COMPLETED",
+        "wait_ms": 1.567
+      },
+      {
+        "transaction": "ORD-0039",
+        "result": "COMPLETED",
+        "wait_ms": 1.713
+      },
+      {
+        "transaction": "ORD-0040",
+        "result": "COMPLETED",
+        "wait_ms": 1.654
+      },
+      {
+        "transaction": "ORD-0041",
+        "result": "COMPLETED",
+        "wait_ms": 1.703
+      },
+      {
+        "transaction": "ORD-0042",
+        "result": "COMPLETED",
+        "wait_ms": 1.498
+      },
+      {
+        "transaction": "ORD-0043",
+        "result": "COMPLETED",
+        "wait_ms": 1.27
+      },
+      {
+        "transaction": "ORD-0044",
+        "result": "COMPLETED",
+        "wait_ms": 1.44
+      },
+      {
+        "transaction": "ORD-0045",
+        "result": "COMPLETED",
+        "wait_ms": 1.359
+      },
+      {
+        "transaction": "ORD-0046",
+        "result": "COMPLETED",
+        "wait_ms": 1.37
+      },
+      {
+        "transaction": "ORD-0047",
+        "result": "COMPLETED",
+        "wait_ms": 1.678
+      },
+      {
+        "transaction": "ORD-0048",
+        "result": "COMPLETED",
+        "wait_ms": 1.575
+      },
+      {
+        "transaction": "ORD-0049",
+        "result": "COMPLETED",
+        "wait_ms": 1.533
+      },
+      {
+        "transaction": "ORD-0050",
+        "result": "COMPLETED",
+        "wait_ms": 1.592
+      },
+      {
+        "transaction": "ORD-0051",
+        "result": "COMPLETED",
+        "wait_ms": 1.566
+      },
+      {
+        "transaction": "ORD-0052",
+        "result": "COMPLETED",
+        "wait_ms": 1.631
+      },
+      {
+        "transaction": "ORD-0053",
+        "result": "COMPLETED",
+        "wait_ms": 1.456
+      },
+      {
+        "transaction": "ORD-0054",
+        "result": "COMPLETED",
+        "wait_ms": 1.433
+      },
+      {
+        "transaction": "ORD-0055",
+        "result": "COMPLETED",
+        "wait_ms": 1.606
+      },
+      {
+        "transaction": "ORD-0056",
+        "result": "COMPLETED",
+        "wait_ms": 1.216
+      },
+      {
+        "transaction": "ORD-0057",
+        "result": "COMPLETED",
+        "wait_ms": 1.791
+      },
+      {
+        "transaction": "ORD-0058",
+        "result": "COMPLETED",
+        "wait_ms": 1.473
+      },
+      {
+        "transaction": "ORD-0059",
+        "result": "COMPLETED",
+        "wait_ms": 1.756
+      },
+      {
+        "transaction": "ORD-0060",
+        "result": "COMPLETED",
+        "wait_ms": 1.579
+      },
+      {
+        "transaction": "ORD-0061",
+        "result": "COMPLETED",
+        "wait_ms": 1.311
+      },
+      {
+        "transaction": "ORD-0062",
+        "result": "COMPLETED",
+        "wait_ms": 1.67
+      },
+      {
+        "transaction": "ORD-0063",
+        "result": "COMPLETED",
+        "wait_ms": 1.28
+      },
+      {
+        "transaction": "ORD-0064",
+        "result": "COMPLETED",
+        "wait_ms": 1.521
+      },
+      {
+        "transaction": "ORD-0065",
+        "result": "COMPLETED",
+        "wait_ms": 1.703
+      },
+      {
+        "transaction": "ORD-0066",
+        "result": "COMPLETED",
+        "wait_ms": 1.381
+      },
+      {
+        "transaction": "ORD-0067",
+        "result": "COMPLETED",
+        "wait_ms": 1.684
+      },
+      {
+        "transaction": "ORD-0068",
+        "result": "COMPLETED",
+        "wait_ms": 1.718
+      },
+      {
+        "transaction": "ORD-0069",
+        "result": "COMPLETED",
+        "wait_ms": 1.524
+      },
+      {
+        "transaction": "ORD-0070",
+        "result": "COMPLETED",
+        "wait_ms": 2.256
+      },
+      {
+        "transaction": "ORD-0071",
+        "result": "COMPLETED",
+        "wait_ms": 1.464
+      },
+      {
+        "transaction": "ORD-0072",
+        "result": "COMPLETED",
+        "wait_ms": 1.624
+      },
+      {
+        "transaction": "ORD-0073",
+        "result": "COMPLETED",
+        "wait_ms": 1.393
+      },
+      {
+        "transaction": "ORD-0074",
+        "result": "COMPLETED",
+        "wait_ms": 1.678
+      },
+      {
+        "transaction": "ORD-0075",
+        "result": "COMPLETED",
+        "wait_ms": 1.664
+      },
+      {
+        "transaction": "ORD-0076",
+        "result": "COMPLETED",
+        "wait_ms": 1.368
+      },
+      {
+        "transaction": "ORD-0077",
+        "result": "COMPLETED",
+        "wait_ms": 1.608
+      },
+      {
+        "transaction": "ORD-0078",
+        "result": "COMPLETED",
+        "wait_ms": 1.672
+      },
+      {
+        "transaction": "ORD-0079",
+        "result": "COMPLETED",
+        "wait_ms": 1.368
+      },
+      {
+        "transaction": "ORD-0080",
+        "result": "COMPLETED",
+        "wait_ms": 1.719
+      },
+      {
+        "transaction": "ORD-0081",
+        "result": "COMPLETED",
+        "wait_ms": 1.614
+      },
+      {
+        "transaction": "ORD-0082",
+        "result": "COMPLETED",
+        "wait_ms": 1.906
+      },
+      {
+        "transaction": "ORD-0083",
+        "result": "COMPLETED",
+        "wait_ms": 1.698
+      },
+      {
+        "transaction": "ORD-0084",
+        "result": "COMPLETED",
+        "wait_ms": 1.352
+      },
+      {
+        "transaction": "ORD-0085",
+        "result": "COMPLETED",
+        "wait_ms": 1.534
+      },
+      {
+        "transaction": "ORD-0086",
+        "result": "COMPLETED",
+        "wait_ms": 1.541
+      },
+      {
+        "transaction": "ORD-0087",
+        "result": "COMPLETED",
+        "wait_ms": 1.486
+      },
+      {
+        "transaction": "ORD-0088",
+        "result": "COMPLETED",
+        "wait_ms": 1.698
+      },
+      {
+        "transaction": "ORD-0089",
+        "result": "COMPLETED",
+        "wait_ms": 1.42
+      },
+      {
+        "transaction": "ORD-0090",
+        "result": "COMPLETED",
+        "wait_ms": 1.548
+      },
+      {
+        "transaction": "ORD-0091",
+        "result": "COMPLETED",
+        "wait_ms": 1.574
+      },
+      {
+        "transaction": "ORD-0092",
+        "result": "COMPLETED",
+        "wait_ms": 1.437
+      },
+      {
+        "transaction": "ORD-0093",
+        "result": "COMPLETED",
+        "wait_ms": 1.655
+      },
+      {
+        "transaction": "ORD-0094",
+        "result": "COMPLETED",
+        "wait_ms": 1.341
+      },
+      {
+        "transaction": "ORD-0095",
+        "result": "COMPLETED",
+        "wait_ms": 1.587
+      },
+      {
+        "transaction": "ORD-0096",
+        "result": "COMPLETED",
+        "wait_ms": 1.315
+      },
+      {
+        "transaction": "ORD-0097",
+        "result": "COMPLETED",
+        "wait_ms": 1.476
+      },
+      {
+        "transaction": "ORD-0098",
+        "result": "COMPLETED",
+        "wait_ms": 1.604
+      },
+      {
+        "transaction": "ORD-0099",
+        "result": "COMPLETED",
+        "wait_ms": 1.291
+      },
+      {
+        "transaction": "ORD-0009",
+        "result": "COMPLETED",
+        "wait_ms": 152.072
+      },
+      {
+        "transaction": "ORD-0005",
+        "result": "COMPLETED",
+        "wait_ms": 156.436
+      },
+      {
+        "transaction": "ORD-0001",
+        "result": "COMPLETED",
+        "wait_ms": 162.642
+      },
+      {
+        "transaction": "ORD-0007",
+        "result": "COMPLETED",
+        "wait_ms": 162.075
+      },
+      {
+        "transaction": "ORD-0002",
+        "result": "COMPLETED",
+        "wait_ms": 167.719
+      },
+      {
+        "transaction": "ORD-0003",
+        "result": "COMPLETED",
+        "wait_ms": 173.019
+      },
+      {
+        "transaction": "ORD-0006",
+        "result": "COMPLETED",
+        "wait_ms": 173.845
+      }
+    ]
+  }
+}

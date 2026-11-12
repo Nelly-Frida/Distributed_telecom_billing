@@ -5,11 +5,18 @@ from common.communication import send_json
 class BullyElection(threading.Thread):
     def __init__(self, node_id, my_id, higher_peers, my_addr,
                  heartbeat_interval=2.0, heartbeat_timeout=5.0,
-                 on_leader_change=None):
+                 on_leader_change=None, all_peers=None):
         super().__init__(daemon=True)
         self.node_id = node_id
         self.my_id = my_id
         self.higher_peers = higher_peers
+        # all_peers = every OTHER node in the group (higher AND lower id).
+        # A winning node must announce itself to everyone, not just the
+        # higher-id peers it happened to contact during the election —
+        # otherwise a node with no higher peers (e.g. the highest id)
+        # would win instantly and tell nobody. Falls back to higher_peers
+        # only for backward compatibility with old callers.
+        self.all_peers = all_peers if all_peers is not None else higher_peers
         self.my_addr = my_addr
         self.hb_interval = heartbeat_interval
         self.hb_timeout = heartbeat_timeout
@@ -21,10 +28,25 @@ class BullyElection(threading.Thread):
         self.elections_started = 0
 
     def receive_election(self, from_id, from_addr):
+        # IMPORTANT: this runs on the thread that must reply to the peer
+        # who sent us the ELECTION message. If we ran _start_election()
+        # here directly, that thread would block for up to ~1s per higher
+        # peer while WE run our own sub-election, making us look
+        # unreachable to the node that just contacted us — a false
+        # timeout that can hand the win to a lower-id node. So we kick
+        # our own election off in the background and reply immediately.
         if self.my_id > from_id:
-            self._start_election()
+            threading.Thread(target=self._start_election, daemon=True).start()
 
     def receive_coordinator(self, leader_id, leader_addr):
+        # Bully's invariant is "the highest surviving id wins". Because
+        # elections can run concurrently (see receive_election above),
+        # COORDINATOR announcements can arrive out of order. Refusing to
+        # downgrade to a lower id than one we've already accepted stops a
+        # stale/incorrect announcement from a lower-id node overriding
+        # the correct, higher-id leader if messages cross on the wire.
+        if self.leader_id is not None and leader_id < self.leader_id:
+            return
         self.leader_id = leader_id
         self.leader_addr = leader_addr
         self.last_hb = time.time()
@@ -67,7 +89,7 @@ class BullyElection(threading.Thread):
             self._broadcast_coordinator()
 
     def _broadcast_coordinator(self):
-        for peer_id, peer_addr in self.higher_peers:
+        for peer_id, peer_addr in self.all_peers:
             try:
                 send_json(peer_addr[0], peer_addr[1], {
                     "type": "COORDINATOR",

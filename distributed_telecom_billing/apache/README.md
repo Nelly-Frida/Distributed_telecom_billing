@@ -6,7 +6,7 @@
    Edit the Alias line so it points at your real path to
    distributed_telecom_billing/powerbi/dashboard_data/
 3. Start **Apache** in the XAMPP control panel.
-4. Verify: http://127.0.0.1:8080/health
+4. Verify: http://127.0.0.1:80/health  (or just http://127.0.0.1/health)
 
 ## Option B - Standalone Apache (Ubuntu)
     sudo apt install apache2
@@ -16,6 +16,6 @@
     sudo systemctl reload apache2
 
 ## Verify
-    curl http://127.0.0.1:8080/health
-    curl http://127.0.0.1:8080/api/stats
-    curl http://127.0.0.1:8080/data/transactions.csv
+    curl http://127.0.0.1:80/health
+    curl http://127.0.0.1:80/api/stats
+    curl http://127.0.0.1:80/data/transactions.csv
