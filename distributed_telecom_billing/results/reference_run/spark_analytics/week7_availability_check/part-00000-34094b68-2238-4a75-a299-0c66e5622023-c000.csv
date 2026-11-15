@@ -1,0 +1,17 @@
+scenario,mode,runs,spark_availability_pct,min_pct,max_pct,experiment_availability_pct,difference_pp
+coordinator_crash,resilient,1,86.36,86.36,86.36,86.36,0.0
+ledger_crash,baseline,1,86.36,86.36,86.36,86.36,0.0
+ledger_crash,resilient,1,100.0,100.0,100.0,100.0,0.0
+rating_byzantine,baseline,1,63.64,63.64,63.64,63.64,0.0
+rating_byzantine,resilient,1,63.64,63.64,63.64,63.64,0.0
+rating_byzantine,resilient_verify,1,100.0,100.0,100.0,100.0,0.0
+rating_crash,baseline,1,86.36,86.36,86.36,86.36,0.0
+rating_crash,resilient,1,100.0,100.0,100.0,100.0,0.0
+rating_drop,baseline,1,63.64,63.64,63.64,63.64,0.0
+rating_drop,resilient,1,100.0,100.0,100.0,100.0,0.0
+rating_error,baseline,1,63.64,63.64,63.64,63.64,0.0
+rating_error,resilient,1,100.0,100.0,100.0,100.0,0.0
+rating_omission,baseline,1,45.45,45.45,45.45,45.45,0.0
+rating_omission,resilient,1,90.91,90.91,90.91,90.91,0.0
+tx_rating_crash,baseline,1,86.36,86.36,86.36,86.36,0.0
+tx_rating_crash,resilient,1,100.0,100.0,100.0,100.0,0.0

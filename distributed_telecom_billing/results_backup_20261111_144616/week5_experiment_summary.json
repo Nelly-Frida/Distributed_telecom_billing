@@ -1,0 +1,273 @@
+{
+  "normal_workload_metrics": {
+    "submitted": 10,
+    "committed": 10,
+    "elapsed_s": 2.343,
+    "throughput_tx_s": 4.268,
+    "mean_client_latency_ms": 233.053
+  },
+  "transactions": [
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0001",
+      "status": "COMMIT",
+      "charge": 22.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 40.047,
+      "commit_ms": 63.534,
+      "total_ms": 167.406,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.20243940000000293,
+      "billing_pid": 1568,
+      "client_ms": 207.636
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0002",
+      "status": "COMMIT",
+      "charge": 24.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 51.053,
+      "commit_ms": 52.547,
+      "total_ms": 172.369,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.20603999999912048,
+      "billing_pid": 1568,
+      "client_ms": 207.934
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0003",
+      "status": "COMMIT",
+      "charge": 26.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 51.709,
+      "commit_ms": 64.793,
+      "total_ms": 180.841,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.21294189999935043,
+      "billing_pid": 1568,
+      "client_ms": 215.155
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0004",
+      "status": "COMMIT",
+      "charge": 28.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 39.689,
+      "commit_ms": 38.521,
+      "total_ms": 153.728,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.18532149999919056,
+      "billing_pid": 1568,
+      "client_ms": 187.28
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0005",
+      "status": "COMMIT",
+      "charge": 30.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 41.197,
+      "commit_ms": 40.634,
+      "total_ms": 143.636,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.17426379999960773,
+      "billing_pid": 1568,
+      "client_ms": 177.233
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0006",
+      "status": "COMMIT",
+      "charge": 32.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 51.763,
+      "commit_ms": 106.247,
+      "total_ms": 252.789,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.28601939999862225,
+      "billing_pid": 1568,
+      "client_ms": 288.237
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0007",
+      "status": "COMMIT",
+      "charge": 34.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 97.55,
+      "commit_ms": 35.364,
+      "total_ms": 207.68,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.2569141000003583,
+      "billing_pid": 1568,
+      "client_ms": 272.836
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0008",
+      "status": "COMMIT",
+      "charge": 36.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 45.413,
+      "commit_ms": 36.999,
+      "total_ms": 188.949,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.2228928000004089,
+      "billing_pid": 1568,
+      "client_ms": 225.642
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0009",
+      "status": "COMMIT",
+      "charge": 38.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 55.811,
+      "commit_ms": 44.574,
+      "total_ms": 159.598,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.19826600000124017,
+      "billing_pid": 1568,
+      "client_ms": 202.45
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0010",
+      "status": "COMMIT",
+      "charge": 40.0,
+      "rating_node": "NODE-3",
+      "prepare_ms": 72.443,
+      "commit_ms": 86.74,
+      "total_ms": 290.537,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.343128099999376,
+      "billing_pid": 1568,
+      "client_ms": 346.125
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0090",
+      "status": "ABORT",
+      "error": "Injected coordinator failure after PREPARE and before global COMMIT decision",
+      "charge": 40.0,
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.2148157000010542,
+      "billing_pid": 1568,
+      "client_ms": 216.838
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0091",
+      "status": "IN_DOUBT",
+      "error": "Injected coordinator crash after durable COMMIT decision",
+      "charge": 42.0,
+      "decision": "COMMIT",
+      "billing_node": "NODE-2",
+      "billing_processing_time": 0.1612948999991204,
+      "billing_pid": 1568,
+      "client_ms": 163.257
+    }
+  ],
+  "recovery": {
+    "recovered": [
+      {
+        "transaction_id": "A3-W5-1794393033663430700-0091",
+        "status": "COMMIT",
+        "charge": 42.0,
+        "rating_node": "NODE-3",
+        "prepare_ms": 48.058,
+        "commit_ms": 38.84,
+        "total_ms": 137.896
+      }
+    ],
+    "count": 1,
+    "billing_node": "NODE-2",
+    "billing_processing_time": 0.09152969999922789,
+    "billing_pid": 1568
+  },
+  "ledger": {
+    "prepared": 0,
+    "committed": 12
+  },
+  "consistency": [
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0001",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 22.0,
+      "ledger_charge": 22.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0002",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 24.0,
+      "ledger_charge": 24.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0003",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 26.0,
+      "ledger_charge": 26.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0004",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 28.0,
+      "ledger_charge": 28.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0005",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 30.0,
+      "ledger_charge": 30.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0006",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 32.0,
+      "ledger_charge": 32.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0007",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 34.0,
+      "ledger_charge": 34.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0008",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 36.0,
+      "ledger_charge": 36.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0009",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 38.0,
+      "ledger_charge": 38.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0010",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 40.0,
+      "ledger_charge": 40.0,
+      "consistent": true
+    },
+    {
+      "transaction_id": "A3-W5-1794393033663430700-0091",
+      "rating_state": "COMMITTED",
+      "ledger_state": "COMMITTED",
+      "rating_charge": 42.0,
+      "ledger_charge": 42.0,
+      "consistent": true
+    }
+  ]
+}

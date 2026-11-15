@@ -1,0 +1,7 @@
+model,clients,failed_component,offered_requests_in_fault,fault_success_pct,availability_pct,availability_during_fault_pct,fault_mean_latency_ms
+host_based,8,NODE-3,160,0.0,60.0,0,0.0
+server_based,8,NODE-3,160,47.5,60.0,0,30.968
+pool_round_robin,8,NODE-3,160,100.0,100.0,100.0,37.205
+pool_least_loaded,8,NODE-3,160,100.0,100.0,100.0,37.674
+workstation,8,workstation 0,160,87.5,60.0,0,19.878
+integrated,8,NODE-3,160,100.0,100.0,100.0,29.769

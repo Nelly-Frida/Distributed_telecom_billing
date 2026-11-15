@@ -1,0 +1,4 @@
+run_tag,transport,requested,concurrency,total_requests,successful,failed,total_time_s,throughput,avg_latency_ms,avg_jitter_ms,request_loss_pct,load_balance_cv
+large_scale,http,100000,50,100000,67457,32543,253.412,266.195,159.656,6.7497,32.543,0.0037
+large_scale,http,100000,50,100000,75000,25000,1037.014,72.323,12.6652,8.6017,25.0,0.0
+large_scale,http,100000,50,100000,85637,14363,528.004,162.19,283.7198,8.0302,14.363,0.0015

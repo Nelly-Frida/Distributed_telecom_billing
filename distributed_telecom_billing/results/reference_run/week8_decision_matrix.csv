@@ -1,0 +1,7 @@
+model,raw_latency,raw_throughput,raw_utilization,raw_scalability,raw_reliability,raw_cost,norm_latency,norm_throughput,norm_utilization,norm_scalability,norm_reliability,norm_cost,score_balanced,score_telecom_availability,gate_central_state,gate_reason,rank_balanced,rank_balanced_after_gate,rank_telecom_availability,rank_telecom_availability_after_gate
+workstation,40.18,411.8,20.58,14.946,87.5,0.00135,1.0,1.0,0.294,1.0,0.875,0.844,0.8888,0.8975,fail,"no shared central state: every workstation would need its own copy of rating plans and balances, and the ledger/2PC of Week 5 requires one authoritative store",1,,1,
+pool_least_loaded,61.55,208.6,39.5,3.799,100.0,0.00196,0.887,0.439,0.564,0.204,1.0,0.538,0.6162,0.6884,pass,central ledger and coordinator remain authoritative,2,1,2,1
+pool_round_robin,62.41,187.17,39.54,3.651,100.0,0.00196,0.882,0.38,0.565,0.193,1.0,0.538,0.6013,0.6772,pass,central ledger and coordinator remain authoritative,3,2,3,2
+integrated,62.27,228.92,13.22,4.014,100.0,0.00303,0.883,0.495,0.189,0.219,1.0,0.0,0.5383,0.599,pass,central ledger and coordinator remain authoritative,4,3,4,3
+server_based,101.82,100.89,52.65,1.825,47.5,0.00128,0.674,0.142,0.752,0.063,0.475,0.879,0.4339,0.4675,pass,central ledger and coordinator remain authoritative,5,4,5,4
+host_based,229.08,49.39,97.54,0.949,0.0,0.00104,0.0,0.0,0.607,0.0,0.0,1.0,0.1607,0.1804,pass,central ledger and coordinator remain authoritative,6,5,6,5

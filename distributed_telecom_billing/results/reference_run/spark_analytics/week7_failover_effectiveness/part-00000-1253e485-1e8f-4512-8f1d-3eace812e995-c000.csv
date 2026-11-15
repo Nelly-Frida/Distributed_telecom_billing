@@ -1,0 +1,17 @@
+scenario,mode,requests_in_fault,served_after_failover,failed_pct,wrong_pct
+coordinator_crash,resilient,706,0,65.16,0.0
+ledger_crash,baseline,394,0,47.46,0.0
+ledger_crash,resilient,488,0,0.0,0.0
+rating_byzantine,baseline,1525,0,0.0,24.98
+rating_byzantine,resilient,1540,0,0.0,25.0
+rating_byzantine,resilient_verify,1413,0,0.0,0.0
+rating_crash,baseline,1531,0,7.38,0.0
+rating_crash,resilient,1520,1,0.0,0.0
+rating_drop,baseline,1516,0,25.0,0.0
+rating_drop,resilient,1522,1,0.0,0.0
+rating_error,baseline,1516,0,25.0,0.0
+rating_error,resilient,1539,1,0.0,0.0
+rating_omission,baseline,63,0,25.4,0.0
+rating_omission,resilient,949,8,0.0,0.0
+tx_rating_crash,baseline,516,0,54.84,0.0
+tx_rating_crash,resilient,369,3,0.54,0.0
