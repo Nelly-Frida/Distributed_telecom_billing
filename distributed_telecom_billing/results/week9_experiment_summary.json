@@ -1,0 +1,1659 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.14.10",
+    "cpu_count": 4,
+    "in_docker": false,
+    "date": "2026-11-22 09:59:47",
+    "args": {
+      "experiments": "all",
+      "clients": 8,
+      "phase": 4.0,
+      "seed": 42,
+      "quick": false
+    },
+    "partitions": 12
+  },
+  "summary": [
+    {
+      "experiment": "access",
+      "variant": "tcp_vs_http",
+      "metric": "identical_results_pct",
+      "value": 100.0,
+      "unit": "%",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "tcp_vs_http"
+    },
+    {
+      "experiment": "access",
+      "variant": "tcp",
+      "metric": "mean_latency_ms",
+      "value": 8.475,
+      "unit": "ms",
+      "value_num": 8.475,
+      "param_num": "",
+      "series": "tcp"
+    },
+    {
+      "experiment": "access",
+      "variant": "http",
+      "metric": "mean_latency_ms",
+      "value": 13.077,
+      "unit": "ms",
+      "value_num": 13.077,
+      "param_num": "",
+      "series": "http"
+    },
+    {
+      "experiment": "location",
+      "variant": "naming_vs_physical",
+      "metric": "partitions_where_data_differs_from_name",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "naming_vs_physical"
+    },
+    {
+      "experiment": "location",
+      "variant": "prefix",
+      "metric": "correct_results_pct",
+      "value": 100.0,
+      "unit": "%",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "prefix"
+    },
+    {
+      "experiment": "location",
+      "variant": "prefix",
+      "metric": "mean_resolve_ms",
+      "value": 0.038,
+      "unit": "ms",
+      "value_num": 0.038,
+      "param_num": "",
+      "series": "prefix"
+    },
+    {
+      "experiment": "location",
+      "variant": "prefix",
+      "metric": "mean_latency_ms",
+      "value": 6.784,
+      "unit": "ms",
+      "value_num": 6.784,
+      "param_num": "",
+      "series": "prefix"
+    },
+    {
+      "experiment": "location",
+      "variant": "dns",
+      "metric": "correct_results_pct",
+      "value": 100.0,
+      "unit": "%",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "dns"
+    },
+    {
+      "experiment": "location",
+      "variant": "dns",
+      "metric": "mean_resolve_ms",
+      "value": 0.381,
+      "unit": "ms",
+      "value_num": 0.381,
+      "param_num": "",
+      "series": "dns"
+    },
+    {
+      "experiment": "location",
+      "variant": "dns",
+      "metric": "mean_latency_ms",
+      "value": 6.813,
+      "unit": "ms",
+      "value_num": 6.813,
+      "param_num": "",
+      "series": "dns"
+    },
+    {
+      "experiment": "location",
+      "variant": "central",
+      "metric": "correct_results_pct",
+      "value": 100.0,
+      "unit": "%",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "location",
+      "variant": "central",
+      "metric": "mean_resolve_ms",
+      "value": 1.876,
+      "unit": "ms",
+      "value_num": 1.876,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "location",
+      "variant": "central",
+      "metric": "mean_latency_ms",
+      "value": 11.175,
+      "unit": "ms",
+      "value_num": 11.175,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "location",
+      "variant": "broadcast",
+      "metric": "correct_results_pct",
+      "value": 100.0,
+      "unit": "%",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "location",
+      "variant": "broadcast",
+      "metric": "mean_resolve_ms",
+      "value": 5.657,
+      "unit": "ms",
+      "value_num": 5.657,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "location",
+      "variant": "broadcast",
+      "metric": "mean_latency_ms",
+      "value": 11.802,
+      "unit": "ms",
+      "value_num": 11.802,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=1#0",
+      "metric": "write_mean_ms",
+      "value": 31.865,
+      "unit": "ms",
+      "value_num": 31.865,
+      "param_num": 1,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=1#0",
+      "metric": "read_mean_ms",
+      "value": 29.512,
+      "unit": "ms",
+      "value_num": 29.512,
+      "param_num": 1,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=1#0",
+      "metric": "errors",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": 1,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=1#0",
+      "metric": "replicas_serving_reads",
+      "value": 1,
+      "unit": "count",
+      "value_num": 1.0,
+      "param_num": 1,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#1",
+      "metric": "write_mean_ms",
+      "value": 46.769,
+      "unit": "ms",
+      "value_num": 46.769,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#1",
+      "metric": "read_mean_ms",
+      "value": 34.749,
+      "unit": "ms",
+      "value_num": 34.749,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#1",
+      "metric": "errors",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#1",
+      "metric": "replicas_serving_reads",
+      "value": 2,
+      "unit": "count",
+      "value_num": 2.0,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=3#2",
+      "metric": "write_mean_ms",
+      "value": 52.434,
+      "unit": "ms",
+      "value_num": 52.434,
+      "param_num": 3,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=3#2",
+      "metric": "read_mean_ms",
+      "value": 35.889,
+      "unit": "ms",
+      "value_num": 35.889,
+      "param_num": 3,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=3#2",
+      "metric": "errors",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": 3,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=3#2",
+      "metric": "replicas_serving_reads",
+      "value": 3,
+      "unit": "count",
+      "value_num": 3.0,
+      "param_num": 3,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#3",
+      "metric": "write_mean_ms",
+      "value": 44.137,
+      "unit": "ms",
+      "value_num": 44.137,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#3",
+      "metric": "read_mean_ms",
+      "value": 31.761,
+      "unit": "ms",
+      "value_num": 31.761,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#3",
+      "metric": "errors",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2#3",
+      "metric": "replicas_serving_reads",
+      "value": 2,
+      "unit": "count",
+      "value_num": 2.0,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2",
+      "metric": "freeze_ms",
+      "value": 17.748,
+      "unit": "ms",
+      "value_num": 17.748,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2",
+      "metric": "ops_copied",
+      "value": 530,
+      "unit": "count",
+      "value_num": 530.0,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=3",
+      "metric": "freeze_ms",
+      "value": 24.433,
+      "unit": "ms",
+      "value_num": 24.433,
+      "param_num": 3,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=3",
+      "metric": "ops_copied",
+      "value": 929,
+      "unit": "count",
+      "value_num": 929.0,
+      "param_num": 3,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2",
+      "metric": "freeze_ms",
+      "value": 12.373,
+      "unit": "ms",
+      "value_num": 12.373,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "R=2",
+      "metric": "ops_copied",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": 2,
+      "series": "R"
+    },
+    {
+      "experiment": "replication",
+      "variant": "all",
+      "metric": "lost_writes",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "all"
+    },
+    {
+      "experiment": "replication",
+      "variant": "all",
+      "metric": "replicas_converged",
+      "value": true,
+      "unit": "bool",
+      "value_num": 1,
+      "param_num": "",
+      "series": "all"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:before",
+      "metric": "requests",
+      "value": 372,
+      "unit": "",
+      "value_num": 372.0,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:before",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:before",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:before",
+      "metric": "mean",
+      "value": 40.446,
+      "unit": "",
+      "value_num": 40.446,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:before",
+      "metric": "p95",
+      "value": 77.681,
+      "unit": "",
+      "value_num": 77.681,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:before",
+      "metric": "max",
+      "value": 120.371,
+      "unit": "",
+      "value_num": 120.371,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:during",
+      "metric": "requests",
+      "value": 65,
+      "unit": "",
+      "value_num": 65.0,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:during",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:during",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:during",
+      "metric": "mean",
+      "value": 43.377,
+      "unit": "",
+      "value_num": 43.377,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:during",
+      "metric": "p95",
+      "value": 81.215,
+      "unit": "",
+      "value_num": 81.215,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:during",
+      "metric": "max",
+      "value": 103.232,
+      "unit": "",
+      "value_num": 103.232,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:after",
+      "metric": "requests",
+      "value": 804,
+      "unit": "",
+      "value_num": 804.0,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:after",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:after",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:after",
+      "metric": "mean",
+      "value": 35.709,
+      "unit": "",
+      "value_num": 35.709,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:after",
+      "metric": "p95",
+      "value": 67.113,
+      "unit": "",
+      "value_num": 67.113,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent:after",
+      "metric": "max",
+      "value": 157.436,
+      "unit": "",
+      "value_num": 157.436,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:before",
+      "metric": "requests",
+      "value": 447,
+      "unit": "",
+      "value_num": 447.0,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:before",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:before",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:before",
+      "metric": "mean",
+      "value": 33.162,
+      "unit": "",
+      "value_num": 33.162,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:before",
+      "metric": "p95",
+      "value": 62.158,
+      "unit": "",
+      "value_num": 62.158,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:before",
+      "metric": "max",
+      "value": 121.038,
+      "unit": "",
+      "value_num": 121.038,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:during",
+      "metric": "requests",
+      "value": 91,
+      "unit": "",
+      "value_num": 91.0,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:during",
+      "metric": "errors",
+      "value": 45,
+      "unit": "",
+      "value_num": 45.0,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:during",
+      "metric": "error_pct",
+      "value": 49.45,
+      "unit": "",
+      "value_num": 49.45,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:during",
+      "metric": "mean",
+      "value": 34.634,
+      "unit": "",
+      "value_num": 34.634,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:during",
+      "metric": "p95",
+      "value": 57.441,
+      "unit": "",
+      "value_num": 57.441,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:during",
+      "metric": "max",
+      "value": 63.479,
+      "unit": "",
+      "value_num": 63.479,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:after",
+      "metric": "requests",
+      "value": 1044,
+      "unit": "",
+      "value_num": 1044.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:after",
+      "metric": "errors",
+      "value": 1044,
+      "unit": "",
+      "value_num": 1044.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:after",
+      "metric": "error_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:after",
+      "metric": "mean",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:after",
+      "metric": "p95",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "direct:after",
+      "metric": "max",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent",
+      "metric": "freeze_ms",
+      "value": 40.807,
+      "unit": "ms",
+      "value_num": 40.807,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent",
+      "metric": "migration_total_ms",
+      "value": 91.41,
+      "unit": "ms",
+      "value_num": 91.41,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent",
+      "metric": "ops_copied",
+      "value": 198,
+      "unit": "count",
+      "value_num": 198.0,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent",
+      "metric": "lost_writes",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "migration",
+      "variant": "transparent",
+      "metric": "replicas_converged",
+      "value": true,
+      "unit": "bool",
+      "value_num": 1,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "failure",
+      "variant": "victim",
+      "metric": "node_outage_s",
+      "value": 4.49,
+      "unit": "s",
+      "value_num": 4.49,
+      "param_num": "",
+      "series": "victim"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:before",
+      "metric": "requests",
+      "value": 371,
+      "unit": "",
+      "value_num": 371.0,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:before",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:before",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:before",
+      "metric": "mean",
+      "value": 40.092,
+      "unit": "",
+      "value_num": 40.092,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:before",
+      "metric": "p95",
+      "value": 77.42,
+      "unit": "",
+      "value_num": 77.42,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:before",
+      "metric": "max",
+      "value": 111.937,
+      "unit": "",
+      "value_num": 111.937,
+      "param_num": "",
+      "series": "transparent:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:during",
+      "metric": "requests",
+      "value": 207,
+      "unit": "",
+      "value_num": 207.0,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:during",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:during",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:during",
+      "metric": "mean",
+      "value": 86.051,
+      "unit": "",
+      "value_num": 86.051,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:during",
+      "metric": "p95",
+      "value": 165.478,
+      "unit": "",
+      "value_num": 165.478,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:during",
+      "metric": "max",
+      "value": 1117.788,
+      "unit": "",
+      "value_num": 1117.788,
+      "param_num": "",
+      "series": "transparent:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:after",
+      "metric": "requests",
+      "value": 498,
+      "unit": "",
+      "value_num": 498.0,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:after",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:after",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:after",
+      "metric": "mean",
+      "value": 55.994,
+      "unit": "",
+      "value_num": 55.994,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:after",
+      "metric": "p95",
+      "value": 99.546,
+      "unit": "",
+      "value_num": 99.546,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent:after",
+      "metric": "max",
+      "value": 177.935,
+      "unit": "",
+      "value_num": 177.935,
+      "param_num": "",
+      "series": "transparent:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:before",
+      "metric": "requests",
+      "value": 498,
+      "unit": "",
+      "value_num": 498.0,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:before",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:before",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:before",
+      "metric": "mean",
+      "value": 29.63,
+      "unit": "",
+      "value_num": 29.63,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:before",
+      "metric": "p95",
+      "value": 54.854,
+      "unit": "",
+      "value_num": 54.854,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:before",
+      "metric": "max",
+      "value": 114.392,
+      "unit": "",
+      "value_num": 114.392,
+      "param_num": "",
+      "series": "direct:before"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:during",
+      "metric": "requests",
+      "value": 412,
+      "unit": "",
+      "value_num": 412.0,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:during",
+      "metric": "errors",
+      "value": 375,
+      "unit": "",
+      "value_num": 375.0,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:during",
+      "metric": "error_pct",
+      "value": 91.02,
+      "unit": "",
+      "value_num": 91.02,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:during",
+      "metric": "mean",
+      "value": 44.217,
+      "unit": "",
+      "value_num": 44.217,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:during",
+      "metric": "p95",
+      "value": 83.434,
+      "unit": "",
+      "value_num": 83.434,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:during",
+      "metric": "max",
+      "value": 114.194,
+      "unit": "",
+      "value_num": 114.194,
+      "param_num": "",
+      "series": "direct:during"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:after",
+      "metric": "requests",
+      "value": 637,
+      "unit": "",
+      "value_num": 637.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:after",
+      "metric": "errors",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:after",
+      "metric": "error_pct",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:after",
+      "metric": "mean",
+      "value": 43.741,
+      "unit": "",
+      "value_num": 43.741,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:after",
+      "metric": "p95",
+      "value": 76.257,
+      "unit": "",
+      "value_num": 76.257,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "direct:after",
+      "metric": "max",
+      "value": 126.032,
+      "unit": "",
+      "value_num": 126.032,
+      "param_num": "",
+      "series": "direct:after"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent",
+      "metric": "repair_after_run_s",
+      "value": 0.04,
+      "unit": "s",
+      "value_num": 0.04,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent",
+      "metric": "replicas_converged",
+      "value": true,
+      "unit": "bool",
+      "value_num": 1,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent",
+      "metric": "lost_writes",
+      "value": 0,
+      "unit": "count",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "failure",
+      "variant": "transparent",
+      "metric": "repaired_ops",
+      "value": 141,
+      "unit": "count",
+      "value_num": 141.0,
+      "param_num": "",
+      "series": "transparent"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:direct",
+      "metric": "mean_ms",
+      "value": 42.697,
+      "unit": "ms",
+      "value_num": 42.697,
+      "param_num": "",
+      "series": "read:direct"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:direct",
+      "metric": "p95_ms",
+      "value": 75.22,
+      "unit": "ms",
+      "value_num": 75.22,
+      "param_num": "",
+      "series": "read:direct"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:direct",
+      "metric": "throughput_rps",
+      "value": 186.0,
+      "unit": "req/s",
+      "value_num": 186.0,
+      "param_num": "",
+      "series": "read:direct"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R1",
+      "metric": "mean_ms",
+      "value": 57.45,
+      "unit": "ms",
+      "value_num": 57.45,
+      "param_num": "",
+      "series": "read:gateway_R1"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R1",
+      "metric": "p95_ms",
+      "value": 124.576,
+      "unit": "ms",
+      "value_num": 124.576,
+      "param_num": "",
+      "series": "read:gateway_R1"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R1",
+      "metric": "throughput_rps",
+      "value": 139.7,
+      "unit": "req/s",
+      "value_num": 139.7,
+      "param_num": "",
+      "series": "read:gateway_R1"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R2",
+      "metric": "mean_ms",
+      "value": 55.822,
+      "unit": "ms",
+      "value_num": 55.822,
+      "param_num": "",
+      "series": "read:gateway_R2"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R2",
+      "metric": "p95_ms",
+      "value": 97.017,
+      "unit": "ms",
+      "value_num": 97.017,
+      "param_num": "",
+      "series": "read:gateway_R2"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R2",
+      "metric": "throughput_rps",
+      "value": 142.3,
+      "unit": "req/s",
+      "value_num": 142.3,
+      "param_num": "",
+      "series": "read:gateway_R2"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R3",
+      "metric": "mean_ms",
+      "value": 69.14,
+      "unit": "ms",
+      "value_num": 69.14,
+      "param_num": "",
+      "series": "read:gateway_R3"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R3",
+      "metric": "p95_ms",
+      "value": 128.026,
+      "unit": "ms",
+      "value_num": 128.026,
+      "param_num": "",
+      "series": "read:gateway_R3"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "read:gateway_R3",
+      "metric": "throughput_rps",
+      "value": 115.4,
+      "unit": "req/s",
+      "value_num": 115.4,
+      "param_num": "",
+      "series": "read:gateway_R3"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:direct",
+      "metric": "mean_ms",
+      "value": 36.473,
+      "unit": "ms",
+      "value_num": 36.473,
+      "param_num": "",
+      "series": "write:direct"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:direct",
+      "metric": "p95_ms",
+      "value": 63.42,
+      "unit": "ms",
+      "value_num": 63.42,
+      "param_num": "",
+      "series": "write:direct"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:direct",
+      "metric": "throughput_rps",
+      "value": 217.4,
+      "unit": "req/s",
+      "value_num": 217.4,
+      "param_num": "",
+      "series": "write:direct"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R1",
+      "metric": "mean_ms",
+      "value": 47.869,
+      "unit": "ms",
+      "value_num": 47.869,
+      "param_num": "",
+      "series": "write:gateway_R1"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R1",
+      "metric": "p95_ms",
+      "value": 93.766,
+      "unit": "ms",
+      "value_num": 93.766,
+      "param_num": "",
+      "series": "write:gateway_R1"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R1",
+      "metric": "throughput_rps",
+      "value": 166.3,
+      "unit": "req/s",
+      "value_num": 166.3,
+      "param_num": "",
+      "series": "write:gateway_R1"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R2",
+      "metric": "mean_ms",
+      "value": 61.52,
+      "unit": "ms",
+      "value_num": 61.52,
+      "param_num": "",
+      "series": "write:gateway_R2"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R2",
+      "metric": "p95_ms",
+      "value": 132.897,
+      "unit": "ms",
+      "value_num": 132.897,
+      "param_num": "",
+      "series": "write:gateway_R2"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R2",
+      "metric": "throughput_rps",
+      "value": 130.9,
+      "unit": "req/s",
+      "value_num": 130.9,
+      "param_num": "",
+      "series": "write:gateway_R2"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R3",
+      "metric": "mean_ms",
+      "value": 83.617,
+      "unit": "ms",
+      "value_num": 83.617,
+      "param_num": "",
+      "series": "write:gateway_R3"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R3",
+      "metric": "p95_ms",
+      "value": 134.679,
+      "unit": "ms",
+      "value_num": 134.679,
+      "param_num": "",
+      "series": "write:gateway_R3"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "write:gateway_R3",
+      "metric": "throughput_rps",
+      "value": 94.0,
+      "unit": "req/s",
+      "value_num": 94.0,
+      "param_num": "",
+      "series": "write:gateway_R3"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "resolution",
+      "metric": "cold_resolve_ms",
+      "value": 3.524,
+      "unit": "ms",
+      "value_num": 3.524,
+      "param_num": "",
+      "series": "resolution"
+    },
+    {
+      "experiment": "overhead",
+      "variant": "resolution",
+      "metric": "warm_resolve_ms",
+      "value": 0.013,
+      "unit": "ms",
+      "value_num": 0.013,
+      "param_num": "",
+      "series": "resolution"
+    }
+  ],
+  "details": {
+    "replication": {
+      "reconfigurations": [
+        [
+          "R=2",
+          {
+            "ok": true,
+            "prefix": "acct.C000",
+            "old": [
+              "NODE-3"
+            ],
+            "new": [
+              "NODE-3",
+              "NODE-4"
+            ],
+            "ops_copied": 530,
+            "precopy_ms": 65.337,
+            "freeze_ms": 17.748,
+            "total_ms": 96.221,
+            "billing_node": "NODE-2",
+            "billing_processing_time": 0.09623320000000035,
+            "billing_pid": 1
+          }
+        ],
+        [
+          "R=3",
+          {
+            "ok": true,
+            "prefix": "acct.C000",
+            "old": [
+              "NODE-3",
+              "NODE-4"
+            ],
+            "new": [
+              "NODE-3",
+              "NODE-4",
+              "NODE-5"
+            ],
+            "ops_copied": 929,
+            "precopy_ms": 146.177,
+            "freeze_ms": 24.433,
+            "total_ms": 180.271,
+            "billing_node": "NODE-2",
+            "billing_processing_time": 0.1802824999999757,
+            "billing_pid": 1
+          }
+        ],
+        [
+          "R=2",
+          {
+            "ok": true,
+            "prefix": "acct.C000",
+            "old": [
+              "NODE-3",
+              "NODE-4",
+              "NODE-5"
+            ],
+            "new": [
+              "NODE-3",
+              "NODE-4"
+            ],
+            "ops_copied": 0,
+            "precopy_ms": 0.023,
+            "freeze_ms": 12.373,
+            "total_ms": 103.161,
+            "billing_node": "NODE-2",
+            "billing_processing_time": 0.1031752069999925,
+            "billing_pid": 1
+          }
+        ]
+      ],
+      "verify": {
+        "prefix": "acct.C000",
+        "locations": [
+          "NODE-3",
+          "NODE-4"
+        ],
+        "epoch": 4,
+        "ops_per_replica": {
+          "NODE-3": 1696,
+          "NODE-4": 1696
+        },
+        "union": 1696,
+        "converged": true,
+        "unreachable": {},
+        "billing_node": "NODE-2",
+        "billing_processing_time": 0.010791601000050832,
+        "billing_pid": 1
+      }
+    },
+    "migration": {
+      "moves": {
+        "1": {
+          "ok": true,
+          "prefix": "acct.C001",
+          "old": [
+            "NODE-4"
+          ],
+          "new": [
+            "NODE-3"
+          ],
+          "ops_copied": 198,
+          "precopy_ms": 44.154,
+          "freeze_ms": 40.807,
+          "total_ms": 91.41,
+          "billing_node": "NODE-2",
+          "billing_processing_time": 0.09144302600003584,
+          "billing_pid": 1
+        },
+        "2": {
+          "ok": true,
+          "prefix": "acct.C002",
+          "old": [
+            "NODE-5"
+          ],
+          "new": [
+            "NODE-3"
+          ],
+          "ops_copied": 249,
+          "precopy_ms": 93.35,
+          "freeze_ms": 83.004,
+          "total_ms": 197.727,
+          "billing_node": "NODE-2",
+          "billing_processing_time": 0.19775675700003603,
+          "billing_pid": 1
+        }
+      }
+    },
+    "failure": {
+      "verify": {
+        "prefix": "acct.C003",
+        "locations": [
+          "NODE-4",
+          "NODE-5"
+        ],
+        "epoch": 2,
+        "ops_per_replica": {
+          "NODE-4": 563,
+          "NODE-5": 563
+        },
+        "union": 563,
+        "converged": true,
+        "unreachable": {},
+        "billing_node": "NODE-2",
+        "billing_processing_time": 0.012225400000033915,
+        "billing_pid": 1
+      },
+      "gateway_stats": {
+        "ops": 8211,
+        "retries": 0,
+        "redirects": 0,
+        "failovers": 140,
+        "stale_marks": 2,
+        "repairs": 2,
+        "repaired_ops": 141,
+        "migrations": 4,
+        "reconfigurations": 7
+      }
+    }
+  }
+}

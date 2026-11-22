@@ -1,0 +1,1455 @@
+{
+  "environment": {
+    "platform": "Linux-6.18.44-fc-v653-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "cpu_count": 1,
+    "in_docker": false,
+    "date": "2026-11-19 10:47:21",
+    "args": {
+      "parts": "all",
+      "lookups": 2000,
+      "ttl": 2.0,
+      "window": 2.0,
+      "outage": 4.0,
+      "repeats": 3,
+      "seed": 42,
+      "quick": false
+    }
+  },
+  "summary": [
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "mean_ms",
+      "value": 0.0008,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "p50_ms",
+      "value": 0.0006,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "p95_ms",
+      "value": 0.001,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "p99_ms",
+      "value": 0.0023,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "messages_per_lookup",
+      "value": 0.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "mean_ms",
+      "value": 2.2115,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "p50_ms",
+      "value": 2.1048,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "p95_ms",
+      "value": 3.7626,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "p99_ms",
+      "value": 6.6056,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "messages_per_lookup",
+      "value": 4.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "mean_ms",
+      "value": 0.0969,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "p50_ms",
+      "value": 0.0783,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "p95_ms",
+      "value": 0.1606,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "p99_ms",
+      "value": 0.2639,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "messages_per_lookup",
+      "value": 1.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "mean_ms",
+      "value": 0.1888,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "p50_ms",
+      "value": 0.1666,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "p95_ms",
+      "value": 0.3006,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "p99_ms",
+      "value": 0.4283,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "messages_per_lookup",
+      "value": 2.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "mean_ms",
+      "value": 0.0139,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "p50_ms",
+      "value": 0.0097,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "p95_ms",
+      "value": 0.0578,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "p99_ms",
+      "value": 0.1143,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "messages_per_lookup",
+      "value": 0.05,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "cache_hit_ratio",
+      "value": 0.951,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "mean_ms",
+      "value": 0.4227,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "p50_ms",
+      "value": 0.3952,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "p95_ms",
+      "value": 0.6087,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "p99_ms",
+      "value": 0.9692,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "messages_per_lookup",
+      "value": 1.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "mean_ms",
+      "value": 0.001,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "p50_ms",
+      "value": 0.0008,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "p95_ms",
+      "value": 0.0022,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "p99_ms",
+      "value": 0.0026,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "messages_per_lookup",
+      "value": 0.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "cache_hit_ratio",
+      "value": 1.0,
+      "unit": ""
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "static",
+      "metric": "time_to_correct_s",
+      "value": null,
+      "unit": "s"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "static",
+      "metric": "wrong_lookups_before_correct",
+      "value": 50,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "static",
+      "metric": "request_served_after_move_with_redirect",
+      "value": false,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "static",
+      "metric": "attempts_with_redirect",
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "static",
+      "metric": "redirect_total_ms",
+      "value": 2.034,
+      "unit": "ms"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "central",
+      "metric": "time_to_correct_s",
+      "value": 0.008,
+      "unit": "s"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "central",
+      "metric": "wrong_lookups_before_correct",
+      "value": 0,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "central",
+      "metric": "request_served_after_move_with_redirect",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "central",
+      "metric": "attempts_with_redirect",
+      "value": 1,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "central",
+      "metric": "redirect_total_ms",
+      "value": 2.586,
+      "unit": "ms"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "broadcast",
+      "metric": "time_to_correct_s",
+      "value": 0.008,
+      "unit": "s"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "broadcast",
+      "metric": "wrong_lookups_before_correct",
+      "value": 0,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "broadcast",
+      "metric": "request_served_after_move_with_redirect",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "broadcast",
+      "metric": "attempts_with_redirect",
+      "value": 1,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "broadcast",
+      "metric": "redirect_total_ms",
+      "value": 2.829,
+      "unit": "ms"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "dns",
+      "metric": "time_to_correct_s",
+      "value": 2.016,
+      "unit": "s"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "dns",
+      "metric": "wrong_lookups_before_correct",
+      "value": 20,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "dns",
+      "metric": "request_served_after_move_with_redirect",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "dns",
+      "metric": "attempts_with_redirect",
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "dns",
+      "metric": "redirect_total_ms",
+      "value": 1.04,
+      "unit": "ms"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "prefix",
+      "metric": "time_to_correct_s",
+      "value": null,
+      "unit": "s"
+    },
+    {
+      "experiment": "staleness",
+      "variant": "prefix",
+      "metric": "wrong_lookups_before_correct",
+      "value": 50,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "prefix",
+      "metric": "request_served_after_move_with_redirect",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "prefix",
+      "metric": "attempts_with_redirect",
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "experiment": "staleness",
+      "variant": "prefix",
+      "metric": "redirect_total_ms",
+      "value": 2.668,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=4",
+      "metric": "mean_ms",
+      "value": 0.6566,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=4",
+      "metric": "messages_per_lookup",
+      "value": 4.0,
+      "unit": ""
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=8",
+      "metric": "mean_ms",
+      "value": 1.2865,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=8",
+      "metric": "messages_per_lookup",
+      "value": 8.0,
+      "unit": ""
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=16",
+      "metric": "mean_ms",
+      "value": 1.9732,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=16",
+      "metric": "messages_per_lookup",
+      "value": 16.0,
+      "unit": ""
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=32",
+      "metric": "mean_ms",
+      "value": 4.2271,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=32",
+      "metric": "messages_per_lookup",
+      "value": 32.0,
+      "unit": ""
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=64",
+      "metric": "mean_ms",
+      "value": 7.3453,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "broadcast_N=64",
+      "metric": "messages_per_lookup",
+      "value": 64.0,
+      "unit": ""
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "central_independent_of_N",
+      "metric": "mean_ms",
+      "value": 0.1321,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "prefix_warm_independent_of_N",
+      "metric": "mean_ms",
+      "value": 0.0017,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_nodes",
+      "variant": "dns_warm_independent_of_N",
+      "metric": "mean_ms",
+      "value": 0.0753,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=1",
+      "metric": "throughput_lookups_s",
+      "value": 9755.7,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=1",
+      "metric": "mean_ms",
+      "value": 0.1015,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=4",
+      "metric": "throughput_lookups_s",
+      "value": 12023.3,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=4",
+      "metric": "mean_ms",
+      "value": 0.3317,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=16",
+      "metric": "throughput_lookups_s",
+      "value": 9489.5,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=16",
+      "metric": "mean_ms",
+      "value": 1.6833,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=32",
+      "metric": "throughput_lookups_s",
+      "value": 10680.1,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "central_T=32",
+      "metric": "mean_ms",
+      "value": 2.9883,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=1",
+      "metric": "throughput_lookups_s",
+      "value": 85000.3,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=1",
+      "metric": "mean_ms",
+      "value": 0.0114,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=4",
+      "metric": "throughput_lookups_s",
+      "value": 83660.3,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=4",
+      "metric": "mean_ms",
+      "value": 0.0472,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=16",
+      "metric": "throughput_lookups_s",
+      "value": 85505.2,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=16",
+      "metric": "mean_ms",
+      "value": 0.1821,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=32",
+      "metric": "throughput_lookups_s",
+      "value": 86603.2,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "dns_warm_T=32",
+      "metric": "mean_ms",
+      "value": 0.362,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=1",
+      "metric": "throughput_lookups_s",
+      "value": 646261.0,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=1",
+      "metric": "mean_ms",
+      "value": 0.0012,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=4",
+      "metric": "throughput_lookups_s",
+      "value": 636437.6,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=4",
+      "metric": "mean_ms",
+      "value": 0.0043,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=16",
+      "metric": "throughput_lookups_s",
+      "value": 611875.6,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=16",
+      "metric": "mean_ms",
+      "value": 0.0171,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=32",
+      "metric": "throughput_lookups_s",
+      "value": 578649.5,
+      "unit": "1/s"
+    },
+    {
+      "experiment": "scalability_clients",
+      "variant": "prefix_warm_T=32",
+      "metric": "mean_ms",
+      "value": 0.0313,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=1000",
+      "metric": "register_s",
+      "value": 0.009,
+      "unit": "s"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=1000",
+      "metric": "prefix_table_load_ms",
+      "value": 8.7,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=1000",
+      "metric": "prefix_lookup_ms",
+      "value": 0.0036,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=1000",
+      "metric": "central_lookup_ms",
+      "value": 0.1599,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=10000",
+      "metric": "register_s",
+      "value": 0.048,
+      "unit": "s"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=10000",
+      "metric": "prefix_table_load_ms",
+      "value": 73.63,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=10000",
+      "metric": "prefix_lookup_ms",
+      "value": 0.0019,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=10000",
+      "metric": "central_lookup_ms",
+      "value": 0.0862,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=50000",
+      "metric": "register_s",
+      "value": 0.309,
+      "unit": "s"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=50000",
+      "metric": "prefix_table_load_ms",
+      "value": 1107.79,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=50000",
+      "metric": "prefix_lookup_ms",
+      "value": 0.002,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scalability_names",
+      "variant": "names=50000",
+      "metric": "central_lookup_ms",
+      "value": 0.0883,
+      "unit": "ms"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "static",
+      "metric": "resolved_during_outage_pct",
+      "value": 100.0,
+      "unit": "%"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "broadcast",
+      "metric": "resolved_during_outage_pct",
+      "value": 100.0,
+      "unit": "%"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "central",
+      "metric": "resolved_during_outage_pct",
+      "value": 0.0,
+      "unit": "%"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "dns_cold",
+      "metric": "resolved_during_outage_pct",
+      "value": 0.0,
+      "unit": "%"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "dns_warm",
+      "metric": "resolved_during_outage_pct",
+      "value": 100.0,
+      "unit": "%"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "prefix_cold",
+      "metric": "resolved_during_outage_pct",
+      "value": 0.0,
+      "unit": "%"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "prefix_warm",
+      "metric": "resolved_during_outage_pct",
+      "value": 100.0,
+      "unit": "%"
+    },
+    {
+      "experiment": "ns_outage",
+      "variant": "central",
+      "metric": "resolves_again_after_recovery",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "tasks",
+      "value": 6,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "names_registered",
+      "value": 6,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "located",
+      "value": 6,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "makespan_s",
+      "value": 0.659,
+      "unit": "s"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "terminated_processes",
+      "value": 4,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "all_terminated",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "names_left",
+      "value": 0,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "tasks_left_on_nodes",
+      "value": 0,
+      "unit": ""
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "terminate_ms",
+      "value": 12.073,
+      "unit": "ms"
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "round_robin",
+      "metric": "assigned_work_cv",
+      "value": 0.43,
+      "unit": ""
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "round_robin",
+      "metric": "max_node_records",
+      "value": 980,
+      "unit": ""
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "round_robin",
+      "metric": "makespan_s_mean",
+      "value": 2.22,
+      "unit": "s"
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "round_robin",
+      "metric": "makespan_s_max",
+      "value": 2.275,
+      "unit": "s"
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "random",
+      "metric": "assigned_work_cv",
+      "value": 0.413,
+      "unit": ""
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "random",
+      "metric": "max_node_records",
+      "value": 1190,
+      "unit": ""
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "random",
+      "metric": "makespan_s_mean",
+      "value": 2.617,
+      "unit": "s"
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "random",
+      "metric": "makespan_s_max",
+      "value": 3.034,
+      "unit": "s"
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "least_loaded",
+      "metric": "assigned_work_cv",
+      "value": 0.082,
+      "unit": ""
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "least_loaded",
+      "metric": "max_node_records",
+      "value": 800,
+      "unit": ""
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "least_loaded",
+      "metric": "makespan_s_mean",
+      "value": 1.777,
+      "unit": "s"
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "least_loaded",
+      "metric": "makespan_s_max",
+      "value": 1.782,
+      "unit": "s"
+    },
+    {
+      "experiment": "scheduling",
+      "variant": "ideal",
+      "metric": "makespan_s",
+      "value": 1.405,
+      "unit": "s"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=1",
+      "metric": "create_ms",
+      "value": 2.065,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=1",
+      "metric": "makespan_s",
+      "value": 3.437,
+      "unit": "s"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=1",
+      "metric": "barrier_overhead_ms",
+      "value": 0.8,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=1",
+      "metric": "speedup",
+      "value": 1.0,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=1",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=2",
+      "metric": "create_ms",
+      "value": 3.257,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=2",
+      "metric": "makespan_s",
+      "value": 1.744,
+      "unit": "s"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=2",
+      "metric": "barrier_overhead_ms",
+      "value": 0.5,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=2",
+      "metric": "speedup",
+      "value": 1.97,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=2",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=4",
+      "metric": "create_ms",
+      "value": 6.546,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=4",
+      "metric": "makespan_s",
+      "value": 0.993,
+      "unit": "s"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=4",
+      "metric": "barrier_overhead_ms",
+      "value": 0.6,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=4",
+      "metric": "speedup",
+      "value": 3.46,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=4",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=8",
+      "metric": "create_ms",
+      "value": 16.151,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=8",
+      "metric": "makespan_s",
+      "value": 0.997,
+      "unit": "s"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=8",
+      "metric": "barrier_overhead_ms",
+      "value": 0.6,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=8",
+      "metric": "speedup",
+      "value": 3.45,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=8",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=16",
+      "metric": "create_ms",
+      "value": 38.755,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=16",
+      "metric": "makespan_s",
+      "value": 1.011,
+      "unit": "s"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=16",
+      "metric": "barrier_overhead_ms",
+      "value": 0.8,
+      "unit": "ms"
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=16",
+      "metric": "speedup",
+      "value": 3.4,
+      "unit": ""
+    },
+    {
+      "experiment": "coordination",
+      "variant": "tasks=16",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "tasks_running_on_crashed_node",
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "tasks_already_finished_there",
+      "value": 0,
+      "unit": ""
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "tasks_rescheduled",
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "first_reschedule_s",
+      "value": 0.549,
+      "unit": "s"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "last_reschedule_s",
+      "value": 0.558,
+      "unit": "s"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "records_processed",
+      "value": 2400,
+      "unit": ""
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "restarts",
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "experiment": "migration_process",
+      "variant": "checkpoint",
+      "metric": "downtime_ms",
+      "value": 10.532,
+      "unit": "ms"
+    },
+    {
+      "experiment": "migration_process",
+      "variant": "checkpoint",
+      "metric": "total_ms",
+      "value": 14.63,
+      "unit": "ms"
+    },
+    {
+      "experiment": "migration_process",
+      "variant": "checkpoint",
+      "metric": "checkpoint_offset",
+      "value": 255,
+      "unit": ""
+    },
+    {
+      "experiment": "migration_process",
+      "variant": "checkpoint",
+      "metric": "located_on_new_node_by_name",
+      "value": true,
+      "unit": ""
+    },
+    {
+      "experiment": "migration_process",
+      "variant": "checkpoint",
+      "metric": "result_exact",
+      "value": true,
+      "unit": ""
+    }
+  ],
+  "details": {
+    "lifecycle": {
+      "reduce": {
+        "charge": 20932.5,
+        "usage": 17848.0,
+        "records": 700,
+        "restarts": 0,
+        "states": [
+          "DONE"
+        ],
+        "billing_node": "NODE-2",
+        "billing_processing_time": 1.9129999998312996e-05,
+        "billing_pid": 24327
+      },
+      "expected": {
+        "charge": 20932.5,
+        "usage": 17848.0
+      },
+      "terminate": {
+        "terminated": [
+          "proc.job-7",
+          "proc.job-8",
+          "proc.job-9",
+          "proc.job-10"
+        ],
+        "terminate_ms": 12.073,
+        "billing_node": "NODE-2",
+        "billing_processing_time": 0.050302792000024965,
+        "billing_pid": 24327
+      }
+    },
+    "scheduling_tasks": [
+      400,
+      30,
+      30,
+      400,
+      40,
+      30,
+      30,
+      30,
+      400,
+      30,
+      400,
+      400,
+      80,
+      30,
+      80,
+      60,
+      30,
+      30,
+      30,
+      30,
+      30,
+      80,
+      80,
+      30
+    ],
+    "recovery": {
+      "reduce": {
+        "charge": 71445.5,
+        "usage": 61735.0,
+        "records": 2400,
+        "restarts": 2,
+        "states": [
+          "DONE"
+        ],
+        "billing_node": "NODE-2",
+        "billing_processing_time": 2.2381999997378443e-05,
+        "billing_pid": 24327
+      },
+      "expected": {
+        "charge": 71445.5,
+        "usage": 61735.0
+      },
+      "events": [
+        {
+          "timestamp": 1795085237.7029,
+          "proc_id": "proc.job-2",
+          "event": "RESCHEDULED",
+          "detail": "NODE-4 -> NODE-6 (node unreachable) resumed at offset 207 recovery_s=0.004"
+        },
+        {
+          "timestamp": 1795085237.7126,
+          "proc_id": "proc.job-6",
+          "event": "RESCHEDULED",
+          "detail": "NODE-4 -> NODE-3 (node unreachable) resumed at offset 0 recovery_s=0.005"
+        }
+      ]
+    }
+  }
+}

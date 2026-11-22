@@ -1,0 +1,755 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.14.10",
+    "cpu_count": 4,
+    "in_docker": false,
+    "date": "2026-11-22 09:57:37",
+    "args": {
+      "parts": "latency,lifecycle,recovery",
+      "lookups": 500,
+      "ttl": 2.0,
+      "window": 1.0,
+      "outage": 3.0,
+      "repeats": 1,
+      "seed": 42,
+      "quick": true
+    }
+  },
+  "summary": [
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "mean_ms",
+      "value": 0.002,
+      "unit": "",
+      "value_num": 0.002,
+      "param_num": "",
+      "series": "static"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "p50_ms",
+      "value": 0.0022,
+      "unit": "",
+      "value_num": 0.0022,
+      "param_num": "",
+      "series": "static"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "p95_ms",
+      "value": 0.0026,
+      "unit": "",
+      "value_num": 0.0026,
+      "param_num": "",
+      "series": "static"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "p99_ms",
+      "value": 0.0066,
+      "unit": "",
+      "value_num": 0.0066,
+      "param_num": "",
+      "series": "static"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "messages_per_lookup",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "static"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "static"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "static",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "static"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "mean_ms",
+      "value": 15.3662,
+      "unit": "",
+      "value_num": 15.3662,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "p50_ms",
+      "value": 13.9025,
+      "unit": "",
+      "value_num": 13.9025,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "p95_ms",
+      "value": 25.3951,
+      "unit": "",
+      "value_num": 25.3951,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "p99_ms",
+      "value": 34.8798,
+      "unit": "",
+      "value_num": 34.8798,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "messages_per_lookup",
+      "value": 4.0,
+      "unit": "",
+      "value_num": 4.0,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "broadcast",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "broadcast"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "mean_ms",
+      "value": 4.4166,
+      "unit": "",
+      "value_num": 4.4166,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "p50_ms",
+      "value": 3.6326,
+      "unit": "",
+      "value_num": 3.6326,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "p95_ms",
+      "value": 6.9497,
+      "unit": "",
+      "value_num": 6.9497,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "p99_ms",
+      "value": 16.3658,
+      "unit": "",
+      "value_num": 16.3658,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "messages_per_lookup",
+      "value": 1.0,
+      "unit": "",
+      "value_num": 1.0,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "central",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "central"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "mean_ms",
+      "value": 9.4517,
+      "unit": "",
+      "value_num": 9.4517,
+      "param_num": "",
+      "series": "dns_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "p50_ms",
+      "value": 7.9575,
+      "unit": "",
+      "value_num": 7.9575,
+      "param_num": "",
+      "series": "dns_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "p95_ms",
+      "value": 19.8729,
+      "unit": "",
+      "value_num": 19.8729,
+      "param_num": "",
+      "series": "dns_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "p99_ms",
+      "value": 33.6876,
+      "unit": "",
+      "value_num": 33.6876,
+      "param_num": "",
+      "series": "dns_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "messages_per_lookup",
+      "value": 2.0,
+      "unit": "",
+      "value_num": 2.0,
+      "param_num": "",
+      "series": "dns_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "dns_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_cold",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "dns_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "mean_ms",
+      "value": 0.7768,
+      "unit": "",
+      "value_num": 0.7768,
+      "param_num": "",
+      "series": "dns_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "p50_ms",
+      "value": 0.0234,
+      "unit": "",
+      "value_num": 0.0234,
+      "param_num": "",
+      "series": "dns_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "p95_ms",
+      "value": 4.4471,
+      "unit": "",
+      "value_num": 4.4471,
+      "param_num": "",
+      "series": "dns_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "p99_ms",
+      "value": 7.1306,
+      "unit": "",
+      "value_num": 7.1306,
+      "param_num": "",
+      "series": "dns_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "messages_per_lookup",
+      "value": 0.166,
+      "unit": "",
+      "value_num": 0.166,
+      "param_num": "",
+      "series": "dns_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "cache_hit_ratio",
+      "value": 0.834,
+      "unit": "",
+      "value_num": 0.834,
+      "param_num": "",
+      "series": "dns_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "dns_warm",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "dns_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "mean_ms",
+      "value": 6.4161,
+      "unit": "",
+      "value_num": 6.4161,
+      "param_num": "",
+      "series": "prefix_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "p50_ms",
+      "value": 5.2491,
+      "unit": "",
+      "value_num": 5.2491,
+      "param_num": "",
+      "series": "prefix_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "p95_ms",
+      "value": 12.1696,
+      "unit": "",
+      "value_num": 12.1696,
+      "param_num": "",
+      "series": "prefix_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "p99_ms",
+      "value": 27.2725,
+      "unit": "",
+      "value_num": 27.2725,
+      "param_num": "",
+      "series": "prefix_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "messages_per_lookup",
+      "value": 1.0,
+      "unit": "",
+      "value_num": 1.0,
+      "param_num": "",
+      "series": "prefix_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "cache_hit_ratio",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "prefix_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_cold",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "prefix_cold"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "mean_ms",
+      "value": 0.0024,
+      "unit": "",
+      "value_num": 0.0024,
+      "param_num": "",
+      "series": "prefix_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "p50_ms",
+      "value": 0.0018,
+      "unit": "",
+      "value_num": 0.0018,
+      "param_num": "",
+      "series": "prefix_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "p95_ms",
+      "value": 0.0039,
+      "unit": "",
+      "value_num": 0.0039,
+      "param_num": "",
+      "series": "prefix_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "p99_ms",
+      "value": 0.0088,
+      "unit": "",
+      "value_num": 0.0088,
+      "param_num": "",
+      "series": "prefix_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "messages_per_lookup",
+      "value": 0.0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "prefix_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "cache_hit_ratio",
+      "value": 1.0,
+      "unit": "",
+      "value_num": 1.0,
+      "param_num": "",
+      "series": "prefix_warm"
+    },
+    {
+      "experiment": "resolution",
+      "variant": "prefix_warm",
+      "metric": "correct_pct",
+      "value": 100.0,
+      "unit": "",
+      "value_num": 100.0,
+      "param_num": "",
+      "series": "prefix_warm"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "tasks",
+      "value": 6,
+      "unit": "",
+      "value_num": 6.0,
+      "param_num": "",
+      "series": "group"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "names_registered",
+      "value": 6,
+      "unit": "",
+      "value_num": 6.0,
+      "param_num": "",
+      "series": "group"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "located",
+      "value": 6,
+      "unit": "",
+      "value_num": 6.0,
+      "param_num": "",
+      "series": "group"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "result_exact",
+      "value": true,
+      "unit": "",
+      "value_num": 1,
+      "param_num": "",
+      "series": "group"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "group",
+      "metric": "makespan_s",
+      "value": 0.619,
+      "unit": "s",
+      "value_num": 0.619,
+      "param_num": "",
+      "series": "group"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "terminated_processes",
+      "value": 4,
+      "unit": "",
+      "value_num": 4.0,
+      "param_num": "",
+      "series": "terminate"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "all_terminated",
+      "value": true,
+      "unit": "",
+      "value_num": 1,
+      "param_num": "",
+      "series": "terminate"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "names_left",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "terminate"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "tasks_left_on_nodes",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "terminate"
+    },
+    {
+      "experiment": "lifecycle",
+      "variant": "terminate",
+      "metric": "terminate_ms",
+      "value": 37.78,
+      "unit": "ms",
+      "value_num": 37.78,
+      "param_num": "",
+      "series": "terminate"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "tasks_running_on_crashed_node",
+      "value": 2,
+      "unit": "",
+      "value_num": 2.0,
+      "param_num": "",
+      "series": "crash"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "tasks_already_finished_there",
+      "value": 0,
+      "unit": "",
+      "value_num": 0.0,
+      "param_num": "",
+      "series": "crash"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "tasks_rescheduled",
+      "value": 2,
+      "unit": "",
+      "value_num": 2.0,
+      "param_num": "",
+      "series": "crash"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "first_reschedule_s",
+      "value": 0.527,
+      "unit": "s",
+      "value_num": 0.527,
+      "param_num": "",
+      "series": "crash"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "last_reschedule_s",
+      "value": 1.356,
+      "unit": "s",
+      "value_num": 1.356,
+      "param_num": "",
+      "series": "crash"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "result_exact",
+      "value": true,
+      "unit": "",
+      "value_num": 1,
+      "param_num": "",
+      "series": "crash"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "records_processed",
+      "value": 2400,
+      "unit": "",
+      "value_num": 2400.0,
+      "param_num": "",
+      "series": "crash"
+    },
+    {
+      "experiment": "recovery",
+      "variant": "crash",
+      "metric": "restarts",
+      "value": 2,
+      "unit": "",
+      "value_num": 2.0,
+      "param_num": "",
+      "series": "crash"
+    }
+  ],
+  "details": {
+    "lifecycle": {
+      "reduce": {
+        "charge": 20932.5,
+        "usage": 17848.0,
+        "records": 700,
+        "restarts": 0,
+        "states": [
+          "DONE"
+        ],
+        "billing_node": "NODE-2",
+        "billing_processing_time": 4.3099999999185457e-05,
+        "billing_pid": 1
+      },
+      "expected": {
+        "charge": 20932.5,
+        "usage": 17848.0
+      },
+      "terminate": {
+        "terminated": [
+          "proc.job-7",
+          "proc.job-8",
+          "proc.job-9",
+          "proc.job-10"
+        ],
+        "terminate_ms": 37.78,
+        "billing_node": "NODE-2",
+        "billing_processing_time": 0.1779408920000094,
+        "billing_pid": 1
+      }
+    },
+    "recovery": {
+      "reduce": {
+        "charge": 71445.5,
+        "usage": 61735.0,
+        "records": 2400,
+        "restarts": 2,
+        "states": [
+          "DONE"
+        ],
+        "billing_node": "NODE-2",
+        "billing_processing_time": 7.130000000188375e-05,
+        "billing_pid": 1
+      },
+      "expected": {
+        "charge": 71445.5,
+        "usage": 61735.0
+      },
+      "events": [
+        {
+          "timestamp": 1795330655.0699,
+          "proc_id": "proc.job-2",
+          "event": "RESCHEDULED",
+          "detail": "NODE-4 -> NODE-6 (node unreachable) resumed at offset 211 recovery_s=0.01"
+        },
+        {
+          "timestamp": 1795330655.8985,
+          "proc_id": "proc.job-6",
+          "event": "RESCHEDULED",
+          "detail": "NODE-4 -> NODE-3 (node unreachable) resumed at offset 0 recovery_s=0.006"
+        }
+      ]
+    }
+  }
+}

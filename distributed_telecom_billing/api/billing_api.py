@@ -45,6 +45,16 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(200, response)
             except Exception as e:
                 self._send(500, {"error": str(e)})
+        elif self.path.rstrip("/") == "/logical":      # Week 9: access transparency over HTTP
+            try:
+                req = self._read_json()
+                req["type"] = "LOGICAL"
+                t0 = time.perf_counter()
+                response = send_json(NODE_HOST, NODE2_PORT, req, timeout=REQUEST_TIMEOUT)
+                response["api_latency_ms"] = round((time.perf_counter() - t0) * 1000, 3)
+                self._send(200, response)
+            except Exception as e:
+                self._send(500, {"error": str(e)})
         else:
             self._send(404, {"error": "not found"})
 

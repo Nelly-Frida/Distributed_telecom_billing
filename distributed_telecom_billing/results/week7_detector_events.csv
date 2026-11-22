@@ -1,0 +1,16 @@
+timestamp,node,event,detail
+1795330565.2816,NODE-2,STARTUP_RECOVERY,"recovered=0 resync={""healed"": 0, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 137.546, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
+1795330609.6561,NODE-4,SUSPECTED,ConnectionRefusedError: [Errno 111] Connection refused
+1795330614.1423,NODE-4,RECOVERED,was SUSPECT for 4.486s
+1795330725.9515,NODE-4,SUSPECTED,ConnectionRefusedError: [Errno 111] Connection refused
+1795330726.9388,NODE-4,DOWN,3 missed probes: ConnectionRefusedError: [Errno 111] Connection refused
+1795330731.9681,NODE-4,RECOVERED,was DOWN for 5.029s
+1795333266.1617,NODE-3,SUSPECTED,TimeoutError: timed out
+1795333266.3924,NODE-3,RECOVERED,was SUSPECT for 0.246s
+1795333271.7221,NODE-5,SUSPECTED,TimeoutError: timed out
+1795333272.062,NODE-4,SUSPECTED,TimeoutError: timed out
+1795333272.157,NODE-4,RECOVERED,was SUSPECT for 0.095s
+1795333272.2151,NODE-5,RECOVERED,was SUSPECT for 0.493s
+1795345979.1258,LEDGER-1,SUSPECTED,TimeoutError: timed out
+1795345980.1355,LEDGER-1,RECOVERED,was SUSPECT for 0.975s
+1795345989.557,LEDGER-1,RESYNC,"{""healed"": 0, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 8197.253, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"

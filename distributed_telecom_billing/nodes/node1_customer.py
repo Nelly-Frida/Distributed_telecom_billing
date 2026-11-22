@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import time
-import random
-import os
-import sys
-
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-
-from common.communication import send_json
-from common.config import NODE_HOST, NODE2_PORT, WORKLOAD_SIZE, REQUEST_TIMEOUT
-
-SERVICES = ["voice", "sms", "data"]
-
-def create_request(request_id):
-=======
 import time, random, threading
 import concurrent.futures
 from common.communication import send_json
@@ -28,7 +11,6 @@ SERVICES = ["voice", "sms", "data"]
 
 
 def create_request(request_id, run_tag=None):
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
     service = random.choice(SERVICES)
     if service == "voice":
         usage = random.uniform(10, 300)
@@ -36,35 +18,11 @@ def create_request(request_id, run_tag=None):
         usage = random.uniform(1, 50)
     else:
         usage = random.uniform(10, 1000)
-<<<<<<< HEAD
-
-    return {
-=======
     request = {
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
         "request_id": request_id,
         "customer_id": f"C{request_id:05d}",
         "service": service,
         "usage": usage,
-<<<<<<< HEAD
-        "timestamp": time.time()
-    }
-
-def run_workload(number_of_requests=WORKLOAD_SIZE, seed=42):
-    random.seed(seed)
-    results = []
-    start_experiment = time.perf_counter()
-
-    for request_id in range(1, number_of_requests + 1):
-        request = create_request(request_id)
-        request_start = time.perf_counter()
-
-        try:
-            response = send_json(
-                NODE_HOST, NODE2_PORT, request,
-                timeout=REQUEST_TIMEOUT
-            )
-=======
         "timestamp": time.time(),
     }
     if run_tag:
@@ -91,7 +49,6 @@ def run_workload(number_of_requests=WORKLOAD_SIZE, seed=42):
         request_start = time.perf_counter()
         try:
             response = _send(request)
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
             latency = time.perf_counter() - request_start
             response["end_to_end_latency"] = latency
             response["success"] = "error" not in response
@@ -101,12 +58,6 @@ def run_workload(number_of_requests=WORKLOAD_SIZE, seed=42):
                 "request_id": request_id,
                 "success": False,
                 "error": str(error),
-<<<<<<< HEAD
-                "end_to_end_latency": latency
-            }
-
-        results.append(response)
-=======
                 "end_to_end_latency": latency,
             }
         results.append(response)
@@ -157,15 +108,11 @@ def run_workload_concurrent(number_of_requests=WORKLOAD_SIZE, seed=42,
     with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as pool:
         futures = [pool.submit(_worker, i, req) for i, req in enumerate(requests_list)]
         concurrent.futures.wait(futures)
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
 
     total_time = time.perf_counter() - start_experiment
     return results, total_time
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
 if __name__ == "__main__":
     results, total_time = run_workload()
     print(f"Completed workload in {total_time:.3f} seconds")

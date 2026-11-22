@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-NODE_HOST = "127.0.0.1"
-
-NODE1_PORT = 5001
-NODE2_PORT = 5002
-
-RATING_NODES = {
-    "NODE-3": (NODE_HOST, 5003),
-    "NODE-4": (NODE_HOST, 5004),
-    "NODE-5": (NODE_HOST, 5005),
-    "NODE-6": (NODE_HOST, 5006),
-}
-
-# Baseline: ["NODE-3"]
-# Proposed 2-node: ["NODE-3", "NODE-4"]
-# Proposed 4-node: ["NODE-3", "NODE-4", "NODE-5", "NODE-6"]
-ACTIVE_RATING_NODES = ["NODE-3", "NODE-4"]
-
-REQUEST_TIMEOUT = 5.0
-WORKLOAD_SIZE = 1000
-=======
 """Environment-aware network configuration for local and Docker deployments."""
 import os
 
@@ -77,4 +56,18 @@ FT_POLICY = os.getenv("FT_POLICY", "round_robin")  # round_robin | least_loaded
 # ---------------------------------------------------------------------------
 NODE_SERVICE_SLOTS = int(os.getenv("NODE_SERVICE_SLOTS", "1"))
 
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
+
+# ---------------------------------------------------------------------------
+# Weeks 9-10 — transparency, naming and process management
+# ---------------------------------------------------------------------------
+NAME_SERVERS = {   # four deployments of the same name-server code, one role each
+    "NS-CENTRAL": (os.getenv("NS_CENTRAL_HOST", "127.0.0.1"), int(os.getenv("NS_CENTRAL_PORT", "5021"))),
+    "NS-ROOT":    (os.getenv("NS_ROOT_HOST", "127.0.0.1"), int(os.getenv("NS_ROOT_PORT", "5022"))),
+    "NS-ACCT":    (os.getenv("NS_ACCT_HOST", "127.0.0.1"), int(os.getenv("NS_ACCT_PORT", "5023"))),
+    "NS-SVC":     (os.getenv("NS_SVC_HOST", "127.0.0.1"), int(os.getenv("NS_SVC_PORT", "5024"))),
+}
+NAMING_MODE = os.getenv("NAMING_MODE", "prefix")      # static | broadcast | central | dns | prefix
+NAMING_TTL_S = float(os.getenv("NAMING_TTL_S", "5"))  # cache lifetime of the dns resolver
+ACCOUNT_PREFIX_DIGITS = int(os.getenv("ACCOUNT_PREFIX_DIGITS", "3"))   # acct.C000xx -> partition acct.C000
+ACCOUNT_REPLICATION = int(os.getenv("ACCOUNT_REPLICATION", "2"))
+STATIC_MAP_PATH = os.getenv("STATIC_MAP_PATH", "data/static_map.json")

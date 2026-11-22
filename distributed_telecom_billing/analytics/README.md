@@ -8,6 +8,25 @@ docker compose --profile analytics run --rm spark-analytics
 ```
 `transaction_analytics.py` aggregates `week5_transactions.csv` and `week6_concurrency.csv` into `results/spark_analytics/week5_*` and `week6_metrics`.
 
+## Weeks 9 and 10
+Run the two experiments first, then:
+```powershell
+docker compose --profile analytics910 run --rm spark-analytics-week9-10
+# or, with Java and pyspark installed locally:
+python analytics/transparency_naming_analytics.py results results/spark_analytics
+```
+`transparency_naming_analytics.py RESULTS_DIR OUTPUT_DIR` reads the raw rows and writes:
+
+| Table (folder in `OUTPUT_DIR`) | Content |
+|---|---|
+| `week9_request_metrics` | requests, errors, error %, mean / p50 / p95 / p99 / max latency per experiment and variant (transparent versus direct) |
+| `week9_error_timeline` | errors and latency per second for the migration, failure and replication experiments (the event shows as the second where the direct client starts failing) |
+| `week9_overhead` | latency per variant and operation: direct physical access versus gateway R = 1, 2, 3 |
+| `week9_overhead_check` | the same mean compared with the experiment summary; the difference must be 0.0 |
+| `week10_resolution_metrics` | latency percentiles, messages per lookup, zero-message share and correctness per resolution strategy |
+| `week10_latency_by_messages` | latency by number of messages (what one extra message costs) |
+| `week10_resolution_check` | cross-check against the experiment summary |
+
 ## Weeks 7 and 8
 Run the two experiments first, then:
 ```powershell

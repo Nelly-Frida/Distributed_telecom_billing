@@ -1,0 +1,536 @@
+timestamp,proc_id,event,detail
+1795085206.4382,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085206.4464,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085206.4491,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795085206.4515,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795085206.4543,proc.job-5,CREATED,on NODE-6 policy=least_loaded
+1795085206.4568,proc.job-6,CREATED,on NODE-4 policy=least_loaded
+1795085206.6176,proc.job-4,DONE,offset=60 charge=1755.5
+1795085206.8693,proc.job-1,DONE,offset=120 charge=3653.5
+1795085206.8702,proc.job-2,DONE,offset=80 charge=2293.5
+1795085206.8712,proc.job-6,DONE,offset=100 charge=3409.5
+1795085207.1224,proc.job-3,DONE,offset=200 charge=5738.5
+1795085207.1233,proc.job-5,DONE,offset=140 charge=4082.0
+1795085207.1303,proc.job-7,CREATED,on NODE-3 policy=least_loaded
+1795085207.1323,proc.job-8,CREATED,on NODE-4 policy=least_loaded
+1795085207.1343,proc.job-9,CREATED,on NODE-5 policy=least_loaded
+1795085207.1362,proc.job-10,CREATED,on NODE-6 policy=least_loaded
+1795085207.4497,proc.job-8,TERMINATED,"name removed, runtime slot released"
+1795085207.4624,proc.job-9,TERMINATED,"name removed, runtime slot released"
+1795085207.4749,proc.job-10,TERMINATED,"name removed, runtime slot released"
+1795085207.487,proc.job-7,TERMINATED,"name removed, runtime slot released"
+1795085208.0512,proc.job-1,CREATED,on NODE-3 policy=round_robin
+1795085208.0534,proc.job-2,CREATED,on NODE-4 policy=round_robin
+1795085208.0555,proc.job-3,CREATED,on NODE-5 policy=round_robin
+1795085208.0577,proc.job-4,CREATED,on NODE-6 policy=round_robin
+1795085208.0599,proc.job-5,CREATED,on NODE-3 policy=round_robin
+1795085208.0622,proc.job-6,CREATED,on NODE-4 policy=round_robin
+1795085208.0674,proc.job-7,CREATED,on NODE-5 policy=round_robin
+1795085208.0694,proc.job-8,CREATED,on NODE-6 policy=round_robin
+1795085208.0715,proc.job-9,CREATED,on NODE-3 policy=round_robin
+1795085208.0737,proc.job-10,CREATED,on NODE-4 policy=round_robin
+1795085208.0757,proc.job-11,CREATED,on NODE-5 policy=round_robin
+1795085208.0778,proc.job-12,CREATED,on NODE-6 policy=round_robin
+1795085208.0799,proc.job-13,CREATED,on NODE-3 policy=round_robin
+1795085208.0819,proc.job-14,CREATED,on NODE-4 policy=round_robin
+1795085208.0841,proc.job-15,CREATED,on NODE-5 policy=round_robin
+1795085208.086,proc.job-16,CREATED,on NODE-6 policy=round_robin
+1795085208.0883,proc.job-17,CREATED,on NODE-3 policy=round_robin
+1795085208.0904,proc.job-18,CREATED,on NODE-4 policy=round_robin
+1795085208.0925,proc.job-19,CREATED,on NODE-5 policy=round_robin
+1795085208.0947,proc.job-20,CREATED,on NODE-6 policy=round_robin
+1795085208.0967,proc.job-21,CREATED,on NODE-3 policy=round_robin
+1795085208.0986,proc.job-22,CREATED,on NODE-4 policy=round_robin
+1795085208.1006,proc.job-23,CREATED,on NODE-5 policy=round_robin
+1795085208.1026,proc.job-24,CREATED,on NODE-6 policy=round_robin
+1795085208.1266,proc.job-2,DONE,offset=30 charge=952.0
+1795085208.1273,proc.job-3,DONE,offset=30 charge=910.5
+1795085208.3836,proc.job-6,DONE,offset=30 charge=577.5
+1795085208.3843,proc.job-7,DONE,offset=30 charge=717.0
+1795085208.3865,proc.job-14,DONE,offset=30 charge=947.0
+1795085208.3878,proc.job-18,DONE,offset=30 charge=657.0
+1795085208.6415,proc.job-10,DONE,offset=30 charge=747.5
+1795085208.6443,proc.job-22,DONE,offset=80 charge=2136.0
+1795085209.15,proc.job-1,DONE,offset=400 charge=11436.5
+1795085209.1507,proc.job-4,DONE,offset=400 charge=12463.0
+1795085209.1523,proc.job-11,DONE,offset=400 charge=11808.5
+1795085209.1535,proc.job-16,DONE,offset=60 charge=1624.0
+1795085209.1545,proc.job-20,DONE,offset=30 charge=968.5
+1795085209.1551,proc.job-21,DONE,offset=30 charge=905.5
+1795085209.4071,proc.job-13,DONE,offset=80 charge=2399.5
+1795085209.408,proc.job-15,DONE,offset=80 charge=2346.5
+1795085209.4086,proc.job-17,DONE,offset=30 charge=1033.0
+1795085209.4093,proc.job-23,DONE,offset=80 charge=2384.0
+1795085209.662,proc.job-19,DONE,offset=30 charge=812.0
+1795085210.1655,proc.job-5,DONE,offset=40 charge=1166.5
+1795085210.1665,proc.job-8,DONE,offset=30 charge=895.0
+1795085210.1673,proc.job-9,DONE,offset=400 charge=11994.5
+1795085210.1681,proc.job-12,DONE,offset=400 charge=11395.0
+1795085210.1687,proc.job-24,DONE,offset=30 charge=917.0
+1795085210.2022,proc.job-1,CREATED,on NODE-3 policy=round_robin
+1795085210.2046,proc.job-2,CREATED,on NODE-4 policy=round_robin
+1795085210.2122,proc.job-3,CREATED,on NODE-5 policy=round_robin
+1795085210.2143,proc.job-4,CREATED,on NODE-6 policy=round_robin
+1795085210.2165,proc.job-5,CREATED,on NODE-3 policy=round_robin
+1795085210.2186,proc.job-6,CREATED,on NODE-4 policy=round_robin
+1795085210.2208,proc.job-7,CREATED,on NODE-5 policy=round_robin
+1795085210.2228,proc.job-8,CREATED,on NODE-6 policy=round_robin
+1795085210.2264,proc.job-9,CREATED,on NODE-3 policy=round_robin
+1795085210.2287,proc.job-10,CREATED,on NODE-4 policy=round_robin
+1795085210.2308,proc.job-11,CREATED,on NODE-5 policy=round_robin
+1795085210.2331,proc.job-12,CREATED,on NODE-6 policy=round_robin
+1795085210.2353,proc.job-13,CREATED,on NODE-3 policy=round_robin
+1795085210.2375,proc.job-14,CREATED,on NODE-4 policy=round_robin
+1795085210.2396,proc.job-15,CREATED,on NODE-5 policy=round_robin
+1795085210.2418,proc.job-16,CREATED,on NODE-6 policy=round_robin
+1795085210.245,proc.job-17,CREATED,on NODE-3 policy=round_robin
+1795085210.2471,proc.job-18,CREATED,on NODE-4 policy=round_robin
+1795085210.2493,proc.job-19,CREATED,on NODE-5 policy=round_robin
+1795085210.2514,proc.job-20,CREATED,on NODE-6 policy=round_robin
+1795085210.2533,proc.job-21,CREATED,on NODE-3 policy=round_robin
+1795085210.2553,proc.job-22,CREATED,on NODE-4 policy=round_robin
+1795085210.2575,proc.job-23,CREATED,on NODE-5 policy=round_robin
+1795085210.2595,proc.job-24,CREATED,on NODE-6 policy=round_robin
+1795085210.421,proc.job-2,DONE,offset=30 charge=952.0
+1795085210.4222,proc.job-3,DONE,offset=30 charge=910.5
+1795085210.4236,proc.job-6,DONE,offset=30 charge=577.5
+1795085210.4246,proc.job-7,DONE,offset=30 charge=717.0
+1795085210.6794,proc.job-10,DONE,offset=30 charge=747.5
+1795085210.681,proc.job-14,DONE,offset=30 charge=947.0
+1795085210.6815,proc.job-15,DONE,offset=80 charge=2346.5
+1795085210.6832,proc.job-22,DONE,offset=80 charge=2136.0
+1795085210.6837,proc.job-23,DONE,offset=80 charge=2384.0
+1795085210.9381,proc.job-18,DONE,offset=30 charge=657.0
+1795085211.1909,proc.job-1,DONE,offset=400 charge=11436.5
+1795085211.1919,proc.job-4,DONE,offset=400 charge=12463.0
+1795085211.1929,proc.job-5,DONE,offset=40 charge=1166.5
+1795085211.1953,proc.job-20,DONE,offset=30 charge=968.5
+1795085211.4482,proc.job-13,DONE,offset=80 charge=2399.5
+1795085211.449,proc.job-16,DONE,offset=60 charge=1624.0
+1795085211.4501,proc.job-21,DONE,offset=30 charge=905.5
+1795085211.7032,proc.job-11,DONE,offset=400 charge=11808.5
+1795085211.7052,proc.job-17,DONE,offset=30 charge=1033.0
+1795085211.7068,proc.job-19,DONE,offset=30 charge=812.0
+1795085212.2102,proc.job-12,DONE,offset=400 charge=11395.0
+1795085212.2112,proc.job-24,DONE,offset=30 charge=917.0
+1795085212.4626,proc.job-8,DONE,offset=30 charge=895.0
+1795085212.4635,proc.job-9,DONE,offset=400 charge=11994.5
+1795085212.4851,proc.job-1,CREATED,on NODE-3 policy=round_robin
+1795085212.4868,proc.job-2,CREATED,on NODE-4 policy=round_robin
+1795085212.4886,proc.job-3,CREATED,on NODE-5 policy=round_robin
+1795085212.4905,proc.job-4,CREATED,on NODE-6 policy=round_robin
+1795085212.4925,proc.job-5,CREATED,on NODE-3 policy=round_robin
+1795085212.4947,proc.job-6,CREATED,on NODE-4 policy=round_robin
+1795085212.4978,proc.job-7,CREATED,on NODE-5 policy=round_robin
+1795085212.4999,proc.job-8,CREATED,on NODE-6 policy=round_robin
+1795085212.5019,proc.job-9,CREATED,on NODE-3 policy=round_robin
+1795085212.5037,proc.job-10,CREATED,on NODE-4 policy=round_robin
+1795085212.5056,proc.job-11,CREATED,on NODE-5 policy=round_robin
+1795085212.5074,proc.job-12,CREATED,on NODE-6 policy=round_robin
+1795085212.5164,proc.job-13,CREATED,on NODE-3 policy=round_robin
+1795085212.5183,proc.job-14,CREATED,on NODE-4 policy=round_robin
+1795085212.5203,proc.job-15,CREATED,on NODE-5 policy=round_robin
+1795085212.522,proc.job-16,CREATED,on NODE-6 policy=round_robin
+1795085212.5251,proc.job-17,CREATED,on NODE-3 policy=round_robin
+1795085212.5272,proc.job-18,CREATED,on NODE-4 policy=round_robin
+1795085212.5292,proc.job-19,CREATED,on NODE-5 policy=round_robin
+1795085212.5311,proc.job-20,CREATED,on NODE-6 policy=round_robin
+1795085212.5329,proc.job-21,CREATED,on NODE-3 policy=round_robin
+1795085212.5348,proc.job-22,CREATED,on NODE-4 policy=round_robin
+1795085212.5368,proc.job-23,CREATED,on NODE-5 policy=round_robin
+1795085212.5387,proc.job-24,CREATED,on NODE-6 policy=round_robin
+1795085212.7153,proc.job-2,DONE,offset=30 charge=952.0
+1795085212.7168,proc.job-3,DONE,offset=30 charge=910.5
+1795085212.9743,proc.job-6,DONE,offset=30 charge=577.5
+1795085212.9752,proc.job-7,DONE,offset=30 charge=717.0
+1795085212.9766,proc.job-10,DONE,offset=30 charge=747.5
+1795085212.9778,proc.job-14,DONE,offset=30 charge=947.0
+1795085212.9785,proc.job-15,DONE,offset=80 charge=2346.5
+1795085212.9795,proc.job-18,DONE,offset=30 charge=657.0
+1795085212.981,proc.job-22,DONE,offset=80 charge=2136.0
+1795085212.9815,proc.job-23,DONE,offset=80 charge=2384.0
+1795085213.4868,proc.job-1,DONE,offset=400 charge=11436.5
+1795085213.488,proc.job-4,DONE,offset=400 charge=12463.0
+1795085213.489,proc.job-8,DONE,offset=30 charge=895.0
+1795085213.4907,proc.job-17,DONE,offset=30 charge=1033.0
+1795085213.4917,proc.job-24,DONE,offset=30 charge=917.0
+1795085213.7455,proc.job-20,DONE,offset=30 charge=968.5
+1795085213.9981,proc.job-11,DONE,offset=400 charge=11808.5
+1795085213.9996,proc.job-19,DONE,offset=30 charge=812.0
+1795085214.5029,proc.job-9,DONE,offset=400 charge=11994.5
+1795085214.5039,proc.job-12,DONE,offset=400 charge=11395.0
+1795085214.5047,proc.job-13,DONE,offset=80 charge=2399.5
+1795085214.5054,proc.job-21,DONE,offset=30 charge=905.5
+1795085214.7567,proc.job-5,DONE,offset=40 charge=1166.5
+1795085214.7576,proc.job-16,DONE,offset=60 charge=1624.0
+1795085214.7802,proc.job-1,CREATED,on NODE-5 policy=random
+1795085214.7819,proc.job-2,CREATED,on NODE-4 policy=random
+1795085214.7836,proc.job-3,CREATED,on NODE-6 policy=random
+1795085214.7858,proc.job-4,CREATED,on NODE-3 policy=random
+1795085214.7877,proc.job-5,CREATED,on NODE-3 policy=random
+1795085214.7895,proc.job-6,CREATED,on NODE-3 policy=random
+1795085214.7916,proc.job-7,CREATED,on NODE-5 policy=random
+1795085214.7934,proc.job-8,CREATED,on NODE-3 policy=random
+1795085214.7969,proc.job-9,CREATED,on NODE-4 policy=random
+1795085214.7987,proc.job-10,CREATED,on NODE-3 policy=random
+1795085214.801,proc.job-11,CREATED,on NODE-3 policy=random
+1795085214.8029,proc.job-12,CREATED,on NODE-6 policy=random
+1795085214.8049,proc.job-13,CREATED,on NODE-6 policy=random
+1795085214.8066,proc.job-14,CREATED,on NODE-3 policy=random
+1795085214.8086,proc.job-15,CREATED,on NODE-4 policy=random
+1795085214.8156,proc.job-16,CREATED,on NODE-3 policy=random
+1795085214.8176,proc.job-17,CREATED,on NODE-6 policy=random
+1795085214.8196,proc.job-18,CREATED,on NODE-3 policy=random
+1795085214.8216,proc.job-19,CREATED,on NODE-3 policy=random
+1795085214.8235,proc.job-20,CREATED,on NODE-4 policy=random
+1795085214.8273,proc.job-21,CREATED,on NODE-3 policy=random
+1795085214.8294,proc.job-22,CREATED,on NODE-6 policy=random
+1795085214.8327,proc.job-23,CREATED,on NODE-3 policy=random
+1795085214.8345,proc.job-24,CREATED,on NODE-4 policy=random
+1795085215.0096,proc.job-2,DONE,offset=30 charge=952.0
+1795085215.0104,proc.job-3,DONE,offset=30 charge=910.5
+1795085215.0168,proc.job-24,DONE,offset=30 charge=917.0
+1795085215.2712,proc.job-15,DONE,offset=80 charge=2346.5
+1795085215.2737,proc.job-20,DONE,offset=30 charge=968.5
+1795085215.7806,proc.job-1,DONE,offset=400 charge=11436.5
+1795085215.7818,proc.job-4,DONE,offset=400 charge=12463.0
+1795085215.783,proc.job-7,DONE,offset=30 charge=717.0
+1795085215.7849,proc.job-12,DONE,offset=400 charge=11395.0
+1795085216.0387,proc.job-9,DONE,offset=400 charge=11994.5
+1795085216.0417,proc.job-22,DONE,offset=80 charge=2136.0
+1795085216.2946,proc.job-13,DONE,offset=80 charge=2399.5
+1795085216.2962,proc.job-17,DONE,offset=30 charge=1033.0
+1795085216.5506,proc.job-11,DONE,offset=400 charge=11808.5
+1795085216.8051,proc.job-8,DONE,offset=30 charge=895.0
+1795085216.8061,proc.job-16,DONE,offset=60 charge=1624.0
+1795085216.8067,proc.job-18,DONE,offset=30 charge=657.0
+1795085217.0594,proc.job-10,DONE,offset=30 charge=747.5
+1795085217.0604,proc.job-14,DONE,offset=30 charge=947.0
+1795085217.0613,proc.job-19,DONE,offset=30 charge=812.0
+1795085217.3131,proc.job-5,DONE,offset=40 charge=1166.5
+1795085217.3143,proc.job-23,DONE,offset=80 charge=2384.0
+1795085217.5659,proc.job-6,DONE,offset=30 charge=577.5
+1795085217.5668,proc.job-21,DONE,offset=30 charge=905.5
+1795085217.6118,proc.job-1,CREATED,on NODE-3 policy=random
+1795085217.6152,proc.job-2,CREATED,on NODE-4 policy=random
+1795085217.6176,proc.job-3,CREATED,on NODE-5 policy=random
+1795085217.6202,proc.job-4,CREATED,on NODE-6 policy=random
+1795085217.6226,proc.job-5,CREATED,on NODE-4 policy=random
+1795085217.625,proc.job-6,CREATED,on NODE-3 policy=random
+1795085217.6286,proc.job-7,CREATED,on NODE-5 policy=random
+1795085217.631,proc.job-8,CREATED,on NODE-4 policy=random
+1795085217.6332,proc.job-9,CREATED,on NODE-3 policy=random
+1795085217.6358,proc.job-10,CREATED,on NODE-4 policy=random
+1795085217.6382,proc.job-11,CREATED,on NODE-5 policy=random
+1795085217.6406,proc.job-12,CREATED,on NODE-3 policy=random
+1795085217.6447,proc.job-13,CREATED,on NODE-3 policy=random
+1795085217.6472,proc.job-14,CREATED,on NODE-3 policy=random
+1795085217.6496,proc.job-15,CREATED,on NODE-4 policy=random
+1795085217.6523,proc.job-16,CREATED,on NODE-6 policy=random
+1795085217.6547,proc.job-17,CREATED,on NODE-6 policy=random
+1795085217.6618,proc.job-18,CREATED,on NODE-5 policy=random
+1795085217.6642,proc.job-19,CREATED,on NODE-6 policy=random
+1795085217.6666,proc.job-20,CREATED,on NODE-6 policy=random
+1795085217.6691,proc.job-21,CREATED,on NODE-5 policy=random
+1795085217.6714,proc.job-22,CREATED,on NODE-5 policy=random
+1795085217.6742,proc.job-23,CREATED,on NODE-4 policy=random
+1795085217.6766,proc.job-24,CREATED,on NODE-4 policy=random
+1795085217.8188,proc.job-2,DONE,offset=30 charge=952.0
+1795085217.82,proc.job-3,DONE,offset=30 charge=910.5
+1795085217.822,proc.job-7,DONE,offset=30 charge=717.0
+1795085217.8286,proc.job-21,DONE,offset=30 charge=905.5
+1795085218.0836,proc.job-15,DONE,offset=80 charge=2346.5
+1795085218.0853,proc.job-18,DONE,offset=30 charge=657.0
+1795085218.0865,proc.job-23,DONE,offset=80 charge=2384.0
+1795085218.3394,proc.job-5,DONE,offset=40 charge=1166.5
+1795085218.3409,proc.job-8,DONE,offset=30 charge=895.0
+1795085218.3425,proc.job-10,DONE,offset=30 charge=747.5
+1795085218.346,proc.job-24,DONE,offset=30 charge=917.0
+1795085218.5981,proc.job-1,DONE,offset=400 charge=11436.5
+1795085218.5997,proc.job-4,DONE,offset=400 charge=12463.0
+1795085218.6039,proc.job-17,DONE,offset=30 charge=1033.0
+1795085218.8587,proc.job-11,DONE,offset=400 charge=11808.5
+1795085218.8622,proc.job-16,DONE,offset=60 charge=1624.0
+1795085218.8644,proc.job-19,DONE,offset=30 charge=812.0
+1795085218.8664,proc.job-20,DONE,offset=30 charge=968.5
+1795085219.1205,proc.job-22,DONE,offset=80 charge=2136.0
+1795085219.6239,proc.job-9,DONE,offset=400 charge=11994.5
+1795085219.6254,proc.job-14,DONE,offset=30 charge=947.0
+1795085220.3805,proc.job-12,DONE,offset=400 charge=11395.0
+1795085220.6322,proc.job-6,DONE,offset=30 charge=577.5
+1795085220.6332,proc.job-13,DONE,offset=80 charge=2399.5
+1795085220.6591,proc.job-1,CREATED,on NODE-4 policy=random
+1795085220.661,proc.job-2,CREATED,on NODE-3 policy=random
+1795085220.6627,proc.job-3,CREATED,on NODE-5 policy=random
+1795085220.666,proc.job-4,CREATED,on NODE-6 policy=random
+1795085220.6679,proc.job-5,CREATED,on NODE-5 policy=random
+1795085220.6697,proc.job-6,CREATED,on NODE-6 policy=random
+1795085220.6716,proc.job-7,CREATED,on NODE-5 policy=random
+1795085220.6737,proc.job-8,CREATED,on NODE-3 policy=random
+1795085220.6756,proc.job-9,CREATED,on NODE-3 policy=random
+1795085220.6775,proc.job-10,CREATED,on NODE-6 policy=random
+1795085220.6793,proc.job-11,CREATED,on NODE-4 policy=random
+1795085220.6812,proc.job-12,CREATED,on NODE-5 policy=random
+1795085220.6829,proc.job-13,CREATED,on NODE-4 policy=random
+1795085220.6847,proc.job-14,CREATED,on NODE-6 policy=random
+1795085220.6867,proc.job-15,CREATED,on NODE-6 policy=random
+1795085220.6885,proc.job-16,CREATED,on NODE-3 policy=random
+1795085220.6903,proc.job-17,CREATED,on NODE-3 policy=random
+1795085220.6923,proc.job-18,CREATED,on NODE-5 policy=random
+1795085220.6952,proc.job-19,CREATED,on NODE-5 policy=random
+1795085220.6972,proc.job-20,CREATED,on NODE-5 policy=random
+1795085220.7008,proc.job-21,CREATED,on NODE-6 policy=random
+1795085220.7026,proc.job-22,CREATED,on NODE-6 policy=random
+1795085220.7045,proc.job-23,CREATED,on NODE-3 policy=random
+1795085220.7063,proc.job-24,CREATED,on NODE-3 policy=random
+1795085220.886,proc.job-2,DONE,offset=30 charge=952.0
+1795085220.8874,proc.job-3,DONE,offset=30 charge=910.5
+1795085220.8886,proc.job-5,DONE,offset=40 charge=1166.5
+1795085220.8926,proc.job-19,DONE,offset=30 charge=812.0
+1795085221.1464,proc.job-7,DONE,offset=30 charge=717.0
+1795085221.1495,proc.job-18,DONE,offset=30 charge=657.0
+1795085221.1504,proc.job-20,DONE,offset=30 charge=968.5
+1795085221.6574,proc.job-1,DONE,offset=400 charge=11436.5
+1795085221.6593,proc.job-4,DONE,offset=400 charge=12463.0
+1795085221.6616,proc.job-9,DONE,offset=400 charge=11994.5
+1795085221.9177,proc.job-6,DONE,offset=30 charge=577.5
+1795085221.9191,proc.job-10,DONE,offset=30 charge=747.5
+1795085221.921,proc.job-13,DONE,offset=80 charge=2399.5
+1795085221.922,proc.job-16,DONE,offset=60 charge=1624.0
+1795085221.9233,proc.job-22,DONE,offset=80 charge=2136.0
+1795085221.9242,proc.job-23,DONE,offset=80 charge=2384.0
+1795085222.1762,proc.job-8,DONE,offset=30 charge=895.0
+1795085222.1777,proc.job-12,DONE,offset=400 charge=11395.0
+1795085222.1786,proc.job-14,DONE,offset=30 charge=947.0
+1795085222.1793,proc.job-15,DONE,offset=80 charge=2346.5
+1795085222.1803,proc.job-17,DONE,offset=30 charge=1033.0
+1795085222.1811,proc.job-21,DONE,offset=30 charge=905.5
+1795085222.1819,proc.job-24,DONE,offset=30 charge=917.0
+1795085222.6845,proc.job-11,DONE,offset=400 charge=11808.5
+1795085222.7329,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085222.735,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085222.7382,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795085222.7403,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795085222.7431,proc.job-5,CREATED,on NODE-4 policy=least_loaded
+1795085222.7457,proc.job-6,CREATED,on NODE-5 policy=least_loaded
+1795085222.7484,proc.job-7,CREATED,on NODE-5 policy=least_loaded
+1795085222.7513,proc.job-8,CREATED,on NODE-4 policy=least_loaded
+1795085222.755,proc.job-9,CREATED,on NODE-5 policy=least_loaded
+1795085222.7598,proc.job-10,CREATED,on NODE-4 policy=least_loaded
+1795085222.7627,proc.job-11,CREATED,on NODE-4 policy=least_loaded
+1795085222.7657,proc.job-12,CREATED,on NODE-3 policy=least_loaded
+1795085222.7687,proc.job-13,CREATED,on NODE-6 policy=least_loaded
+1795085222.7712,proc.job-14,CREATED,on NODE-6 policy=least_loaded
+1795085222.7735,proc.job-15,CREATED,on NODE-5 policy=least_loaded
+1795085222.7758,proc.job-16,CREATED,on NODE-6 policy=least_loaded
+1795085222.7782,proc.job-17,CREATED,on NODE-4 policy=least_loaded
+1795085222.7805,proc.job-18,CREATED,on NODE-4 policy=least_loaded
+1795085222.7826,proc.job-19,CREATED,on NODE-5 policy=least_loaded
+1795085222.7872,proc.job-20,CREATED,on NODE-6 policy=least_loaded
+1795085222.7895,proc.job-21,CREATED,on NODE-4 policy=least_loaded
+1795085222.7919,proc.job-22,CREATED,on NODE-5 policy=least_loaded
+1795085222.7943,proc.job-23,CREATED,on NODE-6 policy=least_loaded
+1795085222.7966,proc.job-24,CREATED,on NODE-4 policy=least_loaded
+1795085222.9366,proc.job-2,DONE,offset=30 charge=952.0
+1795085222.9381,proc.job-3,DONE,offset=30 charge=910.5
+1795085222.9415,proc.job-17,DONE,offset=30 charge=1033.0
+1795085222.9424,proc.job-19,DONE,offset=30 charge=812.0
+1795085223.1974,proc.job-15,DONE,offset=80 charge=2346.5
+1795085223.4583,proc.job-6,DONE,offset=30 charge=577.5
+1795085223.4622,proc.job-7,DONE,offset=30 charge=717.0
+1795085223.4678,proc.job-22,DONE,offset=80 charge=2136.0
+1795085223.7207,proc.job-1,DONE,offset=400 charge=11436.5
+1795085223.7221,proc.job-4,DONE,offset=400 charge=12463.0
+1795085223.9782,proc.job-5,DONE,offset=40 charge=1166.5
+1795085223.9798,proc.job-8,DONE,offset=30 charge=895.0
+1795085223.9826,proc.job-11,DONE,offset=400 charge=11808.5
+1795085223.9856,proc.job-13,DONE,offset=80 charge=2399.5
+1795085223.9891,proc.job-18,DONE,offset=30 charge=657.0
+1795085223.9911,proc.job-20,DONE,offset=30 charge=968.5
+1795085224.246,proc.job-9,DONE,offset=400 charge=11994.5
+1795085224.2471,proc.job-10,DONE,offset=30 charge=747.5
+1795085224.2482,proc.job-14,DONE,offset=30 charge=947.0
+1795085224.2491,proc.job-16,DONE,offset=60 charge=1624.0
+1795085224.2498,proc.job-21,DONE,offset=30 charge=905.5
+1795085224.2505,proc.job-23,DONE,offset=80 charge=2384.0
+1795085224.2512,proc.job-24,DONE,offset=30 charge=917.0
+1795085224.5026,proc.job-12,DONE,offset=400 charge=11395.0
+1795085224.5319,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085224.537,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085224.5393,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795085224.5417,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795085224.5451,proc.job-5,CREATED,on NODE-4 policy=least_loaded
+1795085224.5489,proc.job-6,CREATED,on NODE-5 policy=least_loaded
+1795085224.5547,proc.job-7,CREATED,on NODE-5 policy=least_loaded
+1795085224.5584,proc.job-8,CREATED,on NODE-4 policy=least_loaded
+1795085224.5612,proc.job-9,CREATED,on NODE-5 policy=least_loaded
+1795085224.5655,proc.job-10,CREATED,on NODE-4 policy=least_loaded
+1795085224.5678,proc.job-11,CREATED,on NODE-4 policy=least_loaded
+1795085224.5704,proc.job-12,CREATED,on NODE-3 policy=least_loaded
+1795085224.5727,proc.job-13,CREATED,on NODE-6 policy=least_loaded
+1795085224.575,proc.job-14,CREATED,on NODE-6 policy=least_loaded
+1795085224.5774,proc.job-15,CREATED,on NODE-5 policy=least_loaded
+1795085224.5814,proc.job-16,CREATED,on NODE-6 policy=least_loaded
+1795085224.5839,proc.job-17,CREATED,on NODE-4 policy=least_loaded
+1795085224.5863,proc.job-18,CREATED,on NODE-4 policy=least_loaded
+1795085224.5886,proc.job-19,CREATED,on NODE-5 policy=least_loaded
+1795085224.5909,proc.job-20,CREATED,on NODE-6 policy=least_loaded
+1795085224.5933,proc.job-21,CREATED,on NODE-4 policy=least_loaded
+1795085224.5957,proc.job-22,CREATED,on NODE-5 policy=least_loaded
+1795085224.5982,proc.job-23,CREATED,on NODE-6 policy=least_loaded
+1795085224.6007,proc.job-24,CREATED,on NODE-4 policy=least_loaded
+1795085224.7551,proc.job-2,DONE,offset=30 charge=952.0
+1795085224.7564,proc.job-3,DONE,offset=30 charge=910.5
+1795085224.7581,proc.job-8,DONE,offset=30 charge=895.0
+1795085224.7625,proc.job-17,DONE,offset=30 charge=1033.0
+1795085224.7639,proc.job-19,DONE,offset=30 charge=812.0
+1795085225.0171,proc.job-5,DONE,offset=40 charge=1166.5
+1795085225.0203,proc.job-18,DONE,offset=30 charge=657.0
+1795085225.0212,proc.job-21,DONE,offset=30 charge=905.5
+1795085225.022,proc.job-22,DONE,offset=80 charge=2136.0
+1795085225.0232,proc.job-24,DONE,offset=30 charge=917.0
+1795085225.2762,proc.job-7,DONE,offset=30 charge=717.0
+1795085225.278,proc.job-10,DONE,offset=30 charge=747.5
+1795085225.2814,proc.job-15,DONE,offset=80 charge=2346.5
+1795085225.5342,proc.job-1,DONE,offset=400 charge=11436.5
+1795085225.5356,proc.job-4,DONE,offset=400 charge=12463.0
+1795085225.5392,proc.job-20,DONE,offset=30 charge=968.5
+1795085225.7927,proc.job-14,DONE,offset=30 charge=947.0
+1795085225.7941,proc.job-16,DONE,offset=60 charge=1624.0
+1795085226.046,proc.job-6,DONE,offset=30 charge=577.5
+1795085226.0496,proc.job-9,DONE,offset=400 charge=11994.5
+1795085226.0505,proc.job-11,DONE,offset=400 charge=11808.5
+1795085226.0515,proc.job-13,DONE,offset=80 charge=2399.5
+1795085226.0522,proc.job-23,DONE,offset=80 charge=2384.0
+1795085226.3037,proc.job-12,DONE,offset=400 charge=11395.0
+1795085226.3391,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085226.3412,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085226.3435,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795085226.3459,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795085226.3481,proc.job-5,CREATED,on NODE-4 policy=least_loaded
+1795085226.3503,proc.job-6,CREATED,on NODE-5 policy=least_loaded
+1795085226.3528,proc.job-7,CREATED,on NODE-5 policy=least_loaded
+1795085226.3552,proc.job-8,CREATED,on NODE-4 policy=least_loaded
+1795085226.3574,proc.job-9,CREATED,on NODE-5 policy=least_loaded
+1795085226.3597,proc.job-10,CREATED,on NODE-4 policy=least_loaded
+1795085226.3623,proc.job-11,CREATED,on NODE-4 policy=least_loaded
+1795085226.3646,proc.job-12,CREATED,on NODE-3 policy=least_loaded
+1795085226.367,proc.job-13,CREATED,on NODE-6 policy=least_loaded
+1795085226.3698,proc.job-14,CREATED,on NODE-6 policy=least_loaded
+1795085226.3723,proc.job-15,CREATED,on NODE-5 policy=least_loaded
+1795085226.3746,proc.job-16,CREATED,on NODE-6 policy=least_loaded
+1795085226.377,proc.job-17,CREATED,on NODE-4 policy=least_loaded
+1795085226.3794,proc.job-18,CREATED,on NODE-4 policy=least_loaded
+1795085226.3817,proc.job-19,CREATED,on NODE-5 policy=least_loaded
+1795085226.3854,proc.job-20,CREATED,on NODE-6 policy=least_loaded
+1795085226.3879,proc.job-21,CREATED,on NODE-4 policy=least_loaded
+1795085226.3904,proc.job-22,CREATED,on NODE-5 policy=least_loaded
+1795085226.393,proc.job-23,CREATED,on NODE-6 policy=least_loaded
+1795085226.3955,proc.job-24,CREATED,on NODE-4 policy=least_loaded
+1795085226.5567,proc.job-2,DONE,offset=30 charge=952.0
+1795085226.5579,proc.job-3,DONE,offset=30 charge=910.5
+1795085226.5594,proc.job-5,DONE,offset=40 charge=1166.5
+1795085226.5606,proc.job-7,DONE,offset=30 charge=717.0
+1795085226.5639,proc.job-21,DONE,offset=30 charge=905.5
+1795085226.8176,proc.job-10,DONE,offset=30 charge=747.5
+1795085226.8203,proc.job-17,DONE,offset=30 charge=1033.0
+1795085226.8227,proc.job-18,DONE,offset=30 charge=657.0
+1795085227.3318,proc.job-1,DONE,offset=400 charge=11436.5
+1795085227.3334,proc.job-4,DONE,offset=400 charge=12463.0
+1795085227.3388,proc.job-20,DONE,offset=30 charge=968.5
+1795085227.592,proc.job-6,DONE,offset=30 charge=577.5
+1795085227.5938,proc.job-9,DONE,offset=400 charge=11994.5
+1795085227.5962,proc.job-14,DONE,offset=30 charge=947.0
+1795085227.5976,proc.job-16,DONE,offset=60 charge=1624.0
+1795085227.5989,proc.job-19,DONE,offset=30 charge=812.0
+1795085227.8516,proc.job-8,DONE,offset=30 charge=895.0
+1795085227.8524,proc.job-11,DONE,offset=400 charge=11808.5
+1795085227.8546,proc.job-13,DONE,offset=80 charge=2399.5
+1795085227.8555,proc.job-15,DONE,offset=80 charge=2346.5
+1795085227.8562,proc.job-22,DONE,offset=80 charge=2136.0
+1795085227.8568,proc.job-23,DONE,offset=80 charge=2384.0
+1795085227.8617,proc.job-24,DONE,offset=30 charge=917.0
+1795085228.1133,proc.job-12,DONE,offset=400 charge=11395.0
+1795085228.1896,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085231.6239,proc.job-1,DONE,offset=1600 charge=47469.0
+1795085231.6402,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085231.6418,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085233.3815,proc.job-1,DONE,offset=800 charge=23270.5
+1795085233.3823,proc.job-2,DONE,offset=800 charge=24198.5
+1795085233.3984,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085233.4002,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085233.4019,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795085233.4036,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795085234.3878,proc.job-1,DONE,offset=400 charge=11925.0
+1795085234.3886,proc.job-2,DONE,offset=400 charge=11345.5
+1795085234.3893,proc.job-3,DONE,offset=400 charge=11857.0
+1795085234.39,proc.job-4,DONE,offset=400 charge=12341.5
+1795085234.4096,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085234.4113,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085234.4132,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795085234.4148,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795085234.4179,proc.job-5,CREATED,on NODE-3 policy=least_loaded
+1795085234.4199,proc.job-6,CREATED,on NODE-4 policy=least_loaded
+1795085234.422,proc.job-7,CREATED,on NODE-5 policy=least_loaded
+1795085234.4239,proc.job-8,CREATED,on NODE-6 policy=least_loaded
+1795085234.8941,proc.job-1,DONE,offset=200 charge=6499.0
+1795085234.8953,proc.job-2,DONE,offset=200 charge=5426.0
+1795085234.8966,proc.job-3,DONE,offset=200 charge=5533.0
+1795085234.8975,proc.job-4,DONE,offset=200 charge=5812.5
+1795085235.4021,proc.job-5,DONE,offset=200 charge=5679.5
+1795085235.4028,proc.job-6,DONE,offset=200 charge=6177.5
+1795085235.4036,proc.job-7,DONE,offset=200 charge=6466.0
+1795085235.4043,proc.job-8,DONE,offset=200 charge=5875.5
+1795085235.4252,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085235.427,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795085235.4289,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795085235.4309,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795085235.4331,proc.job-5,CREATED,on NODE-3 policy=least_loaded
+1795085235.4352,proc.job-6,CREATED,on NODE-4 policy=least_loaded
+1795085235.4414,proc.job-7,CREATED,on NODE-5 policy=least_loaded
+1795085235.4439,proc.job-8,CREATED,on NODE-6 policy=least_loaded
+1795085235.4459,proc.job-9,CREATED,on NODE-3 policy=least_loaded
+1795085235.448,proc.job-10,CREATED,on NODE-4 policy=least_loaded
+1795085235.4503,proc.job-11,CREATED,on NODE-5 policy=least_loaded
+1795085235.4525,proc.job-12,CREATED,on NODE-6 policy=least_loaded
+1795085235.4547,proc.job-13,CREATED,on NODE-3 policy=least_loaded
+1795085235.457,proc.job-14,CREATED,on NODE-4 policy=least_loaded
+1795085235.4604,proc.job-15,CREATED,on NODE-5 policy=least_loaded
+1795085235.4623,proc.job-16,CREATED,on NODE-6 policy=least_loaded
+1795085235.6561,proc.job-1,DONE,offset=100 charge=3492.5
+1795085235.6572,proc.job-2,DONE,offset=100 charge=3006.5
+1795085235.6586,proc.job-3,DONE,offset=100 charge=2746.0
+1795085235.6595,proc.job-4,DONE,offset=100 charge=2680.0
+1795085235.9159,proc.job-9,DONE,offset=100 charge=2492.0
+1795085235.9186,proc.job-14,DONE,offset=100 charge=3122.0
+1795085235.9195,proc.job-15,DONE,offset=100 charge=2914.5
+1795085235.9206,proc.job-16,DONE,offset=100 charge=2961.0
+1795085236.173,proc.job-6,DONE,offset=100 charge=2894.0
+1795085236.1762,proc.job-11,DONE,offset=100 charge=3338.0
+1795085236.1774,proc.job-12,DONE,offset=100 charge=2839.5
+1795085236.1789,proc.job-13,DONE,offset=100 charge=3344.0
+1795085236.4307,proc.job-5,DONE,offset=100 charge=2639.0
+1795085236.4317,proc.job-7,DONE,offset=100 charge=2813.5
+1795085236.4326,proc.job-8,DONE,offset=100 charge=2999.0
+1795085236.4334,proc.job-10,DONE,offset=100 charge=3187.5
+1795085236.5357,proc.job-1,CREATED,on NODE-3 policy=round_robin
+1795085236.5381,proc.job-2,CREATED,on NODE-4 policy=round_robin
+1795085236.54,proc.job-3,CREATED,on NODE-5 policy=round_robin
+1795085236.542,proc.job-4,CREATED,on NODE-6 policy=round_robin
+1795085236.5446,proc.job-5,CREATED,on NODE-3 policy=round_robin
+1795085236.5467,proc.job-6,CREATED,on NODE-4 policy=round_robin
+1795085236.5491,proc.job-7,CREATED,on NODE-5 policy=round_robin
+1795085236.5511,proc.job-8,CREATED,on NODE-6 policy=round_robin
+1795085237.6978,proc.job-1,DONE,offset=300 charge=9321.5
+1795085237.7029,proc.job-2,RESCHEDULED,NODE-4 -> NODE-6 (node unreachable) resumed at offset 207 recovery_s=0.004
+1795085237.7047,proc.job-3,DONE,offset=300 charge=8671.5
+1795085237.706,proc.job-4,DONE,offset=300 charge=8278.0
+1795085237.7126,proc.job-6,RESCHEDULED,NODE-4 -> NODE-3 (node unreachable) resumed at offset 0 recovery_s=0.005
+1795085238.4723,proc.job-5,DONE,offset=300 charge=9351.5
+1795085238.4736,proc.job-7,DONE,offset=300 charge=9275.5
+1795085238.4744,proc.job-8,DONE,offset=300 charge=8627.0
+1795085238.9775,proc.job-2,DONE,offset=300 charge=9011.0
+1795085239.4805,proc.job-6,DONE,offset=300 charge=8909.5
+1795085239.5664,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795085240.3843,proc.job-1,MIGRATED,NODE-3 -> NODE-5 at offset 255
+1795085241.4891,proc.job-1,DONE,offset=600 charge=17096.5

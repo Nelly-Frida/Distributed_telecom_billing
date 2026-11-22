@@ -1,0 +1,40 @@
+timestamp,proc_id,event,detail
+1795330651.1617,proc.job-1,CREATED,on NODE-3 policy=least_loaded
+1795330651.1799,proc.job-2,CREATED,on NODE-4 policy=least_loaded
+1795330651.1919,proc.job-3,CREATED,on NODE-5 policy=least_loaded
+1795330651.2062,proc.job-4,CREATED,on NODE-6 policy=least_loaded
+1795330651.2349,proc.job-5,CREATED,on NODE-6 policy=least_loaded
+1795330651.2454,proc.job-6,CREATED,on NODE-4 policy=least_loaded
+1795330651.5931,proc.job-1,DONE,offset=120 charge=3653.5
+1795330651.6103,proc.job-2,DONE,offset=80 charge=2293.5
+1795330651.6322,proc.job-4,DONE,offset=60 charge=1755.5
+1795330651.6553,proc.job-6,DONE,offset=100 charge=3409.5
+1795330651.9164,proc.job-3,DONE,offset=200 charge=5738.5
+1795330651.9333,proc.job-5,DONE,offset=140 charge=4082.0
+1795330651.9851,proc.job-7,CREATED,on NODE-3 policy=least_loaded
+1795330652.0003,proc.job-8,CREATED,on NODE-4 policy=least_loaded
+1795330652.0135,proc.job-9,CREATED,on NODE-5 policy=least_loaded
+1795330652.0297,proc.job-10,CREATED,on NODE-6 policy=least_loaded
+1795330652.3709,proc.job-8,TERMINATED,"name removed, runtime slot released"
+1795330652.4434,proc.job-9,TERMINATED,"name removed, runtime slot released"
+1795330652.4659,proc.job-10,TERMINATED,offset=176 charge=6059.0
+1795330652.4767,proc.job-10,TERMINATED,"name removed, runtime slot released"
+1795330652.5146,proc.job-7,TERMINATED,"name removed, runtime slot released"
+1795330653.7806,proc.job-1,CREATED,on NODE-3 policy=round_robin
+1795330653.7957,proc.job-2,CREATED,on NODE-4 policy=round_robin
+1795330653.8137,proc.job-3,CREATED,on NODE-5 policy=round_robin
+1795330653.8259,proc.job-4,CREATED,on NODE-6 policy=round_robin
+1795330653.8363,proc.job-5,CREATED,on NODE-3 policy=round_robin
+1795330653.8462,proc.job-6,CREATED,on NODE-4 policy=round_robin
+1795330653.8563,proc.job-7,CREATED,on NODE-5 policy=round_robin
+1795330653.8644,proc.job-8,CREATED,on NODE-6 policy=round_robin
+1795330655.0554,proc.job-1,DONE,offset=300 charge=9321.5
+1795330655.0699,proc.job-2,RESCHEDULED,NODE-4 -> NODE-6 (node unreachable) resumed at offset 211 recovery_s=0.01
+1795330655.0745,proc.job-3,DONE,offset=300 charge=8671.5
+1795330655.0821,proc.job-4,DONE,offset=300 charge=8278.0
+1795330655.8985,proc.job-6,RESCHEDULED,NODE-4 -> NODE-3 (node unreachable) resumed at offset 0 recovery_s=0.006
+1795330655.9036,proc.job-7,DONE,offset=300 charge=9275.5
+1795330655.9093,proc.job-8,DONE,offset=300 charge=8627.0
+1795330656.1703,proc.job-2,DONE,offset=300 charge=9011.0
+1795330656.1921,proc.job-5,DONE,offset=300 charge=9351.5
+1795330656.9707,proc.job-6,DONE,offset=300 charge=8909.5

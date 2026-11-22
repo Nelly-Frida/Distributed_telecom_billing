@@ -15,6 +15,12 @@ x-common-env: &common-env
   FT_DEFAULT_MODE: "${FT_DEFAULT_MODE:-resilient}"
   NODE_SERVICE_SLOTS: "1"             # Week 8: emulated capacity of one node
   DASHBOARD_DIR: /app/powerbi/dashboard_data
+  NS_CENTRAL_HOST: ns-central         # Weeks 9-10: name servers
+  NS_ROOT_HOST: ns-root
+  NS_ACCT_HOST: ns-acct
+  NS_SVC_HOST: ns-svc
+  BILLING_API_HOST: billing-api       # lets the Week 9 experiment test access over HTTP
+  NAMING_MODE: "${NAMING_MODE:-prefix}"
 
 services:
   ledger:
@@ -44,6 +50,58 @@ services:
     ports: ["5008:5008"]
     restart: unless-stopped        # Week 7: a crashed replica is restarted and re-synchronised
 
+  ns-central:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "naming/name_server.py"]
+    environment:
+      BIND_HOST: "0.0.0.0"
+      NS_NAME: NS-CENTRAL
+      NS_DB_PATH: /data/naming.db
+    volumes:
+      - ns_central_data:/data
+    ports: ["5021:5021"]
+    restart: unless-stopped
+
+  ns-root:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "naming/name_server.py"]
+    environment:
+      BIND_HOST: "0.0.0.0"
+      NS_NAME: NS-ROOT
+      NS_DB_PATH: /data/naming.db
+    volumes:
+      - ns_root_data:/data
+    ports: ["5022:5022"]
+    restart: unless-stopped
+
+  ns-acct:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "naming/name_server.py"]
+    environment:
+      BIND_HOST: "0.0.0.0"
+      NS_NAME: NS-ACCT
+      NS_DB_PATH: /data/naming.db
+    volumes:
+      - ns_acct_data:/data
+    ports: ["5023:5023"]
+    restart: unless-stopped
+
+  ns-svc:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    command: ["python", "naming/name_server.py"]
+    environment:
+      BIND_HOST: "0.0.0.0"
+      NS_NAME: NS-SVC
+      NS_DB_PATH: /data/naming.db
+    volumes:
+      - ns_svc_data:/data
+    ports: ["5024:5024"]
+    restart: unless-stopped
+
   node3:
     image: distributed-telecom-billing:assignment3
     build: .
@@ -52,6 +110,7 @@ services:
       <<: *common-env
       ADVERTISE_HOST: node3
       RATING_DB_PATH: /data/rating.db
+      ACCOUNT_DB_PATH: /data/accounts.db    # Week 9: account partitions hosted by the node
     volumes:
       - node3_data:/data
       - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
@@ -66,6 +125,7 @@ services:
       <<: *common-env
       ADVERTISE_HOST: node4
       RATING_DB_PATH: /data/rating.db
+      ACCOUNT_DB_PATH: /data/accounts.db    # Week 9: account partitions hosted by the node
     volumes:
       - node4_data:/data
       - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
@@ -80,6 +140,7 @@ services:
       <<: *common-env
       ADVERTISE_HOST: node5
       RATING_DB_PATH: /data/rating.db
+      ACCOUNT_DB_PATH: /data/accounts.db    # Week 9: account partitions hosted by the node
     volumes:
       - node5_data:/data
       - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
@@ -94,6 +155,7 @@ services:
       <<: *common-env
       ADVERTISE_HOST: node6
       RATING_DB_PATH: /data/rating.db
+      ACCOUNT_DB_PATH: /data/accounts.db    # Week 9: account partitions hosted by the node
     volumes:
       - node6_data:/data
       - ./powerbi/dashboard_data:/app/powerbi/dashboard_data
@@ -107,6 +169,7 @@ services:
     environment:
       <<: *common-env
       TX_JOURNAL_PATH: /data/coordinator.db
+      PM_DB_PATH: /data/process_table.db    # Week 10: process table survives a NODE-2 restart
       TX_CSV_PATH: /app/results/week5_transactions.csv
     volumes:
       - coordinator_data:/data
@@ -117,6 +180,10 @@ services:
     depends_on:
       - ledger
       - ledger2
+      - ns-central
+      - ns-root
+      - ns-acct
+      - ns-svc
       - node3
       - node4
       - node5
@@ -193,7 +260,52 @@ services:
     environment:
       SPARK_LOCAL_IP: 127.0.0.1
 
+  # ---------------- Week 9 and 10 practical experiments (start the stack first) ----------------
+  week9-transparency:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    profiles: ["week9"]
+    command: ["python", "experiments/week9_transparency.py"]
+    environment:
+      <<: *common-env
+    volumes:
+      - ./results:/app/results
+    depends_on:
+      - node2
+
+  week10-naming-processes:
+    image: distributed-telecom-billing:assignment3
+    build: .
+    profiles: ["week10"]
+    command: ["python", "experiments/week10_naming_processes.py"]
+    environment:
+      <<: *common-env
+    volumes:
+      - ./results:/app/results
+    depends_on:
+      - node2
+
+  spark-analytics-week9-10:
+    image: apache/spark:3.5.1
+    profiles: ["analytics910"]
+    user: root
+    working_dir: /opt/spark/work-dir
+    command:
+      - /opt/spark/bin/spark-submit
+      - /opt/app/transparency_naming_analytics.py
+      - /opt/results
+      - /opt/results/spark_analytics
+    volumes:
+      - ./analytics:/opt/app:ro
+      - ./results:/opt/results
+    environment:
+      SPARK_LOCAL_IP: 127.0.0.1
+
 volumes:
+  ns_central_data:
+  ns_root_data:
+  ns_acct_data:
+  ns_svc_data:
   ledger_data:
   ledger2_data:
   coordinator_data:

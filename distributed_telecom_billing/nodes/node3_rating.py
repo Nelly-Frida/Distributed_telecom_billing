@@ -1,34 +1,10 @@
-<<<<<<< HEAD
-import socket
-import json
-import time
-import os
-import sys
-
-=======
 """Rating node with Lamport clock + Bully election (Week 4)."""
 import socket, json, time, os, sys, threading
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from rating.rating_engine import RatingEngine
-<<<<<<< HEAD
-
-HOST = "127.0.0.1"
-PORT = 5003
-NODE_ID = "NODE-3"
-
-engine = RatingEngine()
-
-def process_request(request):
-    start = time.perf_counter()
-    charge = engine.calculate_charge(request["service"], request["usage"])
-    processing_time = time.perf_counter() - start
-
-    return {
-=======
 from coordination.lamport_clock import LamportClock
 from coordination.bully_election import BullyElection
 from coordination.coordinator import Coordinator
@@ -36,6 +12,7 @@ from transactions.rating_participant import RatingTransactionParticipant
 from common.config import BIND_HOST, ADVERTISE_HOST, RATING_NODES
 from common.fault_state import FaultState
 from common.emulated_work import ServiceCapacity
+from nodes.node_extensions import NodeExtensions
 
 HOST, PORT = BIND_HOST, 5003
 NODE_ID    = "NODE-3"
@@ -46,6 +23,7 @@ tx_participant = RatingTransactionParticipant(engine, os.getenv("RATING_DB_PATH"
 clock   = LamportClock(NODE_ID)
 faults  = FaultState(NODE_ID)       # Week 7 fault injection
 capacity = ServiceCapacity()        # Week 8 emulated service slots
+extensions = NodeExtensions(NODE_ID, capacity)   # Weeks 9-10: accounts, ownership, processes
 elector = None
 coord   = None
 
@@ -57,34 +35,17 @@ def process_request(request):
     processing_time = time.perf_counter() - start
     return {
         "queue_wait_ms": round(queue_wait_ms, 3),
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
         "request_id": request["request_id"],
         "customer_id": request["customer_id"],
         "charge": charge,
         "node": NODE_ID,
         "processing_time": processing_time,
-<<<<<<< HEAD
-        "pid": os.getpid()
-    }
-
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server.bind((HOST, PORT))
-server.listen(50)
-
-print(f"{NODE_ID} running on {HOST}:{PORT} PID={os.getpid()}")
-
-while True:
-    connection, address = server.accept()
-
-=======
         "pid": os.getpid(),
     }
 
 
 def handle(connection):
     global coord
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
     try:
         buffer = b""
         while b"\n" not in buffer:
@@ -92,21 +53,6 @@ def handle(connection):
             if not chunk:
                 break
             buffer += chunk
-<<<<<<< HEAD
-
-        if not buffer:
-            continue
-
-        request = json.loads(buffer.split(b"\n", 1)[0].decode())
-        response = process_request(request)
-        connection.sendall((json.dumps(response) + "\n").encode())
-
-    except Exception as error:
-        response = {"error": str(error), "node": NODE_ID}
-        connection.sendall((json.dumps(response) + "\n").encode())
-    finally:
-        connection.close()
-=======
         if not buffer:
             return
         request = json.loads(buffer.split(b"\n", 1)[0].decode())
@@ -123,6 +69,11 @@ def handle(connection):
             if action[0] == "error":        # service failure
                 connection.sendall((json.dumps({"error": action[1], "node": NODE_ID}) + "\n").encode())
                 return
+        ext = extensions.handle(request)     # Weeks 9-10 messages
+        if ext is not None:
+            ext["node"] = NODE_ID
+            connection.sendall((json.dumps(ext) + "\n").encode())
+            return
         clock.update(request.get("lamport", 0))
 
         if request.get("type") == "NODE_STATS":
@@ -207,4 +158,3 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a

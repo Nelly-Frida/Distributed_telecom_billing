@@ -98,3 +98,15 @@ timestamp,event,node,details
 1793937341.684,failure_detected,3,missed for 5.8s
 1793937406.679,failure_detected,6,missed for 5.7s
 1794398059.942,failure_detected,3,missed for 5.2s
+1795330612.531,failure_detected,4,missed for 5.1s
+1795330659.579,failure_detected,4,missed for 5.8s
+1795330729.703,failure_detected,4,missed for 5.6s
+1795332849.027,failure_detected,6,missed for 279.2s
+1795332849.956,failure_detected,5,missed for 279.2s
+1795332850.23,failure_detected,3,missed for 279.7s
+1795332850.413,failure_detected,4,missed for 278.4s
+1795333266.059,failure_detected,6,missed for 5.3s
+1795333266.206,failure_detected,3,missed for 5.6s
+1795333266.223,failure_detected,5,missed for 5.5s
+1795345976.09,failure_detected,4,missed for 23.5s
+1795345976.431,failure_detected,5,missed for 24.0s

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import socket
-import json
-import os
-import sys
-import time
-
-=======
 """NODE-2: billing front-end, 2PC coordinator and (Week 7) failure-aware router.
 
 Each request may carry ft_mode:
@@ -15,61 +7,10 @@ Each request may carry ft_mode:
                  set with FT_DEFAULT_MODE)
 """
 import socket, json, os, sys, time, threading
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-<<<<<<< HEAD
-from processing.dispatcher import Dispatcher
-
-HOST = "127.0.0.1"
-PORT = 5002
-
-dispatcher = Dispatcher()
-
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server.bind((HOST, PORT))
-server.listen(100)
-
-print(f"NODE-2 Billing Server running on {HOST}:{PORT}")
-print(f"PID: {os.getpid()}")
-print(f"Active rating nodes: {dispatcher.node_names}")
-
-while True:
-    connection, address = server.accept()
-    connection.settimeout(10)
-
-    try:
-        buffer = b""
-        while b"\n" not in buffer:
-            chunk = connection.recv(4096)
-            if not chunk:
-                break
-            buffer += chunk
-
-        if not buffer:
-            connection.close()
-            continue
-
-        request = json.loads(buffer.split(b"\n", 1)[0].decode())
-        start = time.perf_counter()
-        response = dispatcher.process_request(request)
-        total_time = time.perf_counter() - start
-
-        response["billing_node"] = "NODE-2"
-        response["billing_processing_time"] = total_time
-        response["billing_pid"] = os.getpid()
-
-        connection.sendall((json.dumps(response) + "\n").encode())
-
-    except Exception as error:
-        response = {"error": str(error), "node": "NODE-2"}
-        connection.sendall((json.dumps(response) + "\n").encode())
-    finally:
-        connection.close()
-=======
 from common.config import (BIND_HOST, NODE2_PORT, ACTIVE_RATING_NODES, RATING_NODES, LEDGER_REPLICAS,
                            RESULTS_DIR, REQUEST_TIMEOUT, FT_DEFAULT_MODE, FT_PROBE_INTERVAL,
                            FT_PROBE_TIMEOUT, FT_MISS_THRESHOLD, FT_ATTEMPT_TIMEOUT, FT_MAX_ATTEMPTS,
@@ -79,6 +20,10 @@ from fault_tolerance.failure_detector import FailureDetector
 from fault_tolerance.resilient_dispatcher import ResilientDispatcher
 from processing.dispatcher import Dispatcher
 from transactions.two_phase_commit import TwoPhaseCommitCoordinator
+from common.config import NAMING_MODE
+from naming.resolvers import make_resolver
+from transparency.gateway import TransparentGateway
+from process_mgmt.process_manager import ProcessManager
 
 HOST = BIND_HOST
 PORT = NODE2_PORT
@@ -109,6 +54,8 @@ detector = FailureDetector(targets, interval=FT_PROBE_INTERVAL, timeout=FT_PROBE
                            csv_path=os.path.join(RESULTS_DIR, "week7_detector_events.csv"),
                            on_recovered=_on_node_recovered)
 resilient = ResilientDispatcher(detector)
+gateway = TransparentGateway(make_resolver(NAMING_MODE))   # Week 9: transparent access to logical resources
+pm = ProcessManager(detector)                              # Week 10: distributed process management
 
 
 def startup_recovery():
@@ -166,6 +113,46 @@ def route(request):
         return tx_coordinator.status(request["transaction_id"])
     if kind == "TX_RESYNC":
         return tx_coordinator.resync_ledger()
+    if kind == "PM_CREATE":
+        return pm.create(request["spec"], policy=request.get("policy", "least_loaded"), node=request.get("node"),
+                         parent=request.get("parent"))
+    if kind == "PM_CREATE_GROUP":
+        return pm.create_group(request["tasks"], seed=request.get("seed", 1), policy=request.get("policy", "least_loaded"),
+                               work_ms=request.get("work_ms", 2.0))
+    if kind == "PM_WAIT":
+        return pm.wait(request["proc_ids"], timeout=request.get("timeout", 120.0))
+    if kind == "PM_REDUCE":
+        return pm.reduce(request["proc_ids"])
+    if kind == "PM_LOCATE":
+        return pm.locate(request["proc_id"])
+    if kind == "PM_INFO":
+        return pm.info(request["proc_id"])
+    if kind == "PM_TERMINATE":
+        return pm.terminate(request["proc_id"], cascade=request.get("cascade", True))
+    if kind == "PM_MIGRATE":
+        return pm.migrate(request["proc_id"], request["to"])
+    if kind == "PM_TABLE":
+        return pm.table()
+    if kind == "PM_EVENTS":
+        return {"events": pm.events[-request.get("last", 200):]}
+    if kind == "PM_RESET":
+        return pm.reset()
+    if kind == "LOGICAL":
+        return gateway.invoke(request)
+    if kind == "LOGICAL_MIGRATE":
+        return gateway.migrate(request["prefix"], request["from"], request["to"])
+    if kind == "LOGICAL_REPLICAS":
+        return gateway.reconfigure(request["prefix"], request["nodes"])
+    if kind == "LOGICAL_VERIFY":
+        return gateway.verify(request["prefix"])
+    if kind == "LOGICAL_STATUS":
+        return gateway.snapshot()
+    if kind == "LOGICAL_INVALIDATE":
+        gateway.resolver.invalidate()
+        return {"ok": True}
+    if kind == "LOGICAL_MODE":     # switch the naming strategy used by the gateway at run time
+        gateway.resolver = make_resolver(request["mode"])
+        return {"ok": True, "mode": request["mode"]}
     if kind == "TX_PENDING":
         return {"pending": tx_coordinator.pending_count()}
     if kind == "TX_CONSISTENCY":
@@ -250,4 +237,3 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> c81990a93298febbf229fdf955dfdd8432a09a2a
