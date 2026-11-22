@@ -1,0 +1,4 @@
+total_requests,successful_requests,failed_requests,throughput,average_latency_ms,average_jitter_ms,request_loss_percent,cpu_percent,memory_mb,load_balance_cv,node_distribution
+1000,1000,0,43.7377039919292,22.841312100135838,40.19394654625814,0.0,0.0,29.3828125,0.0,"{'NODE-3': 500, 'NODE-4': 500}"
+1000,1000,0,39.38264847217151,25.37457660025393,45.73892902904978,0.0,0.0,29.15625,0.0,"{'NODE-3': 500, 'NODE-4': 500}"
+1000,1000,0,43.486318128027506,22.97735740027565,41.40828608570656,0.0,0.0,29.125,0.0,"{'NODE-3': 500, 'NODE-4': 500}"

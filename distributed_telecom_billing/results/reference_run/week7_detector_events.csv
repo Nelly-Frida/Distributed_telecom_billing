@@ -1,0 +1,63 @@
+timestamp,node,event,detail
+1794677086.3479,NODE-2,STARTUP_RECOVERY,"recovered=0 resync={""healed"": 0, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 7.358, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
+1794677094.8436,NODE-4,SUSPECTED,ConnectionRefusedError: [Errno 111] Connection refused
+1794677095.8445,NODE-4,RECOVERED,was SUSPECT for 1.001s
+1794677106.4329,NODE-4,SUSPECTED_PASSIVE,ConnectionRefusedError: [Errno 111] Connection refused
+1794677107.847,NODE-4,RECOVERED,was SUSPECT for 1.414s
+1794677118.8497,NODE-4,SUSPECTED,TimeoutError: timed out
+1794677119.8523,NODE-4,DOWN,3 missed probes: TimeoutError: timed out
+1794677122.3599,NODE-4,RECOVERED,was DOWN for 2.508s
+1794677130.8627,NODE-4,SUSPECTED,TimeoutError: timed out
+1794677131.8648,NODE-4,DOWN,3 missed probes: TimeoutError: timed out
+1794677134.3714,NODE-4,RECOVERED,was DOWN for 2.507s
+1794677142.3744,NODE-4,SUSPECTED,ConnectionError: No response received
+1794677143.3743,NODE-4,DOWN,3 missed probes: ConnectionError: No response received
+1794677146.3757,NODE-4,RECOVERED,was DOWN for 3.001s
+1794677154.3526,NODE-4,SUSPECTED_PASSIVE,ConnectionError: No response received
+1794677155.3786,NODE-4,DOWN,3 missed probes: ConnectionError: No response received
+1794677158.3796,NODE-4,RECOVERED,was DOWN for 3.001s
+1794677166.3809,NODE-4,SUSPECTED,RuntimeError: injected service failure
+1794677167.3816,NODE-4,DOWN,3 missed probes: RuntimeError: injected service failure
+1794677170.3834,NODE-4,RECOVERED,was DOWN for 3.002s
+1794677178.3975,NODE-4,SUSPECTED_PASSIVE,RuntimeError: injected service failure
+1794677179.8867,NODE-4,DOWN,3 missed probes: RuntimeError: injected service failure
+1794677182.8906,NODE-4,RECOVERED,was DOWN for 3.004s
+1794677214.4909,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677214.898,NODE-4,RECOVERED,was SUSPECT for 0.407s
+1794677214.9026,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677215.3995,NODE-4,RECOVERED,was SUSPECT for 0.497s
+1794677215.4104,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677215.8986,NODE-4,RECOVERED,was SUSPECT for 0.488s
+1794677215.9025,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677216.3975,NODE-4,RECOVERED,was SUSPECT for 0.495s
+1794677216.4001,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677216.8981,NODE-4,RECOVERED,was SUSPECT for 0.498s
+1794677216.9056,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677217.3981,NODE-4,RECOVERED,was SUSPECT for 0.493s
+1794677217.4043,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677217.8983,NODE-4,RECOVERED,was SUSPECT for 0.494s
+1794677217.9077,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677218.398,NODE-4,RECOVERED,was SUSPECT for 0.49s
+1794677218.4036,NODE-4,SUSPECTED_PASSIVE,byzantine deviation: charge differs from majority
+1794677218.8989,NODE-4,RECOVERED,was SUSPECT for 0.495s
+1794677232.8372,NODE-2,STARTUP_RECOVERY,"recovered=0 resync={""healed"": 0, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 1.979, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
+1794677241.3414,NODE-3,SUSPECTED,ConnectionRefusedError: [Errno 111] Connection refused
+1794677242.3449,NODE-3,RECOVERED,was SUSPECT for 1.003s
+1794677245.7333,LEDGER,ANTI_ENTROPY,"{""healed"": 441, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 2891.895, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
+1794677249.4336,NODE-3,REDRIVE,re-drove 282 pending transaction(s)
+1794677249.4425,NODE-2,REDRIVE_PERIODIC,re-drove 169 pending transaction(s)
+1794677254.9113,NODE-3,SUSPECTED_PASSIVE,2PC PREPARE could not reach rating node
+1794677256.3531,NODE-3,RECOVERED,was SUSPECT for 1.442s
+1794677256.4677,NODE-3,REDRIVE,re-drove 5 pending transaction(s)
+1794677267.3603,LEDGER-1,SUSPECTED,ConnectionRefusedError: [Errno 111] Connection refused
+1794677268.3644,LEDGER-1,RECOVERED,was SUSPECT for 1.004s
+1794677271.8551,LEDGER,ANTI_ENTROPY,"{""healed"": 506, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 3391.667, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
+1794677274.9025,NODE-2,REDRIVE_PERIODIC,re-drove 92 pending transaction(s)
+1794677274.9216,LEDGER-1,REDRIVE,re-drove 185 pending transaction(s)
+1794677276.3715,LEDGER-1,RESYNC,"{""healed"": 475, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 1449.262, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
+1794677280.8773,LEDGER-1,SUSPECTED,ConnectionRefusedError: [Errno 111] Connection refused
+1794677281.8698,LEDGER-1,DOWN,3 missed probes: ConnectionRefusedError: [Errno 111] Connection refused
+1794677282.3793,LEDGER-1,RECOVERED,was DOWN for 0.51s
+1794677283.567,LEDGER-1,RESYNC,"{""healed"": 174, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 1182.991, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
+1794677296.3745,NODE-2,REDRIVE_PERIODIC,re-drove 7 pending transaction(s)
+1794677297.268,NODE-2,STARTUP_RECOVERY,"recovered=0 resync={""healed"": 0, ""orphans_cleaned"": 0, ""unrecoverable"": 0, ""resync_ms"": 71.862, ""replicas_reachable"": [""LEDGER-1"", ""LEDGER-2""]}"
